@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        payCalculator();
+        findQuadrant();
 
     }
 
@@ -12,6 +12,8 @@ public class Main {
 
         System.out.println("Please enter a number");
         int number = scanner.nextInt();
+
+        scanner.close();
 
         if (number >= 10 && number <= 99) {
             System.out.println("Two digits");
@@ -40,6 +42,8 @@ public class Main {
         System.out.println("Enter your pet's name");
         String pet = scanner.nextLine();
 
+        scanner.close();
+
         String message = "There once was a person named " + userName + " who lived in " + city + ". At the age of " + age + ", " + userName + " went to college at " + college + ". " + userName + " graduated and went to work as a " + profession + ". Then, " + userName + " adopted an animal named " + pet + ". They both lived happily ever after!";
 
 
@@ -54,6 +58,7 @@ public class Main {
 
         System.out.println("Enter your hourly pay rate");
         double payRate = scanner.nextDouble();
+        scanner.close();
 
         double pay;
         double overTime;
@@ -74,5 +79,39 @@ public class Main {
         }
 
 
+    }
+
+    public static void findQuadrant() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter x");
+        int x = scanner.nextInt();
+
+        System.out.println("enter y");
+        int y = scanner.nextInt();
+        scanner.close();
+
+        if (x < 0 && y > 0) {
+            System.out.println("The point lies in the 2nd Quadrant.");
+        } else if (x > 0 && y > 0) {
+            System.out.println("The point lies in the 1st Quadrant.");
+        } else if (x > 0 && y < 0) {
+            System.out.println("The point lies in the 4th Quadrant.");
+        } else {
+            System.out.println("The point lies in the 3rd Quadrant.");
+        }
+    }
+
+    public static void formulaConverter() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("enter X");
+        int x = scanner.nextInt();
+
+        System.out.println("enter Y");
+        int y = scanner.nextInt();
+
+        int result = (3 * x) + (5 * y);
+
+        System.out.println("result = " + result);
     }
 }
