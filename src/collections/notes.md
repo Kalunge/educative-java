@@ -135,7 +135,9 @@ the ```Iterator()``` method in ArrayList returns an ```Iteratot``` type object. 
 2. ```next()``` - this method returns the next element in the list. before calling it, we should always call ```hasNext``` to verify that there is an element; otherwise, ```NoSuchElementException``` will be thrown.
 3. ```remove()``` - this method removes the las element returned by the iterator. it can be called only once per call to the ```next()```
 4. ```forEachRemaining(Consumer<? super E> action)``` - this method was introduced in Java 8. it performs the given action for each remaining element untill all elements have been processed or the action throws an exception. this method's benefit is that we do not need to check if there is a next element every time.
-5. 
+
+if we try to directly remove an element while iterating an ArrayList using an Iterator is created, then ```ConcurrentModificationException``` will also be thrown. we should always use the ```remove()``` method in the iterator to remove an element from the ArrayList.
+
 
 
 
