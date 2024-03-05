@@ -78,6 +78,9 @@ public class Vehicle implements Comparable<Vehicle> {
                 }
             });
 
+//            vehicles.sort((o1, o2) -> o1.brand.compareTo(o2.brand));
+            vehicles.sort(Comparator.comparing(o -> o.brand));
+
 
         }
     }
