@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97a6042a-5015-43f1-9889-c8c78113e8fd" name="Changes" comment="" />
+    <list default="true" id="97a6042a-5015-43f1-9889-c8c78113e8fd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/collections/ListIteratorDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collections/notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/collections/notes.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,7 +60,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.ArrayListPractice">
+  <component name="RunManager" selected="Application.ListIteratorDemo">
     <configuration name="ArrayListPractice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="collections.ArrayListPractice" />
       <module name="educative-java" />
@@ -96,8 +100,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Operations" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="collections.Operations" />
+    <configuration name="ListIteratorDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="collections.ListIteratorDemo" />
       <module name="educative-java" />
       <extension name="coverage">
         <pattern>
@@ -124,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ListIteratorDemo" />
         <item itemvalue="Application.ArrayListPractice" />
         <item itemvalue="Application.IterationDemo" />
         <item itemvalue="Application.Iteration" />
         <item itemvalue="Application.OtherOperations" />
-        <item itemvalue="Application.Operations" />
       </list>
     </recent_temporary>
   </component>
@@ -143,7 +147,7 @@
       <workItem from="1709031009394" duration="4914000" />
       <workItem from="1709116910961" duration="2129000" />
       <workItem from="1709303395788" duration="187000" />
-      <workItem from="1709616432738" duration="7265000" />
+      <workItem from="1709616432738" duration="9226000" />
     </task>
     <servers />
   </component>

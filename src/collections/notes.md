@@ -138,6 +138,22 @@ the ```Iterator()``` method in ArrayList returns an ```Iteratot``` type object. 
 
 if we try to directly remove an element while iterating an ArrayList using an Iterator is created, then ```ConcurrentModificationException``` will also be thrown. we should always use the ```remove()``` method in the iterator to remove an element from the ArrayList.
 
+## Iteration using ListIterator
+
+## using ListIterator
+The ```Iterator``` provides very limited capabilities as we can iterate only in the forward direction and we cannot update or insrt an element to the list while iterating. to overcome these problems, we can use ```ListIterator```. the ```ListIterator()``` method returns an object of type ListIterator which can then be used to iterate the ArrayList
+
+below are the methods that are available in the ListIterator interface.
+1. ```hasNext``` - this method is used to check if there is a next element in the lit when the list is iterated in the forward direction.
+2. ```next()``` - this method returns the next element in the list and advances the cursor positiion. 
+3. ```hasPrevious()``` - this method is used to check if there is a next element in the lizt when the list is iterated in the backward direction
+4. ```previous()``` - this method returns the previous element in the list and moves the cursor position backward
+5. ```nextIndex()``` - this method returns the index of the element that would be returned by a subsequent call to next(). it returns -1 if the listIterator is at the beginning of the list.
+6. ```previousIndex()``` - this method return the index of the element that would have been returned by a subsequent call to precious(). it returns -1 if the list iterator is at the beginning of the list.
+7. ```remove()``` - this method removes the last element that was returned by next() or previous() from the list. this call can only be made once per call to next() or previous(). it can be made only if add() has not been called after the last call to next() or previous()
+8. ```set(E e)``` - this method replaces the last element returned by next() or previous() with the specified element. This call can be made only if neither remove() nor add() have been called after the last call to next() or previous().
+9. ```add(E e)``` - This method inserts the specified element into the list. the element is inserted immediately before the element that would be returned by next(), if any , and after the element that would be returned by previous() if any.
+
 
 
 
