@@ -157,6 +157,15 @@ below are the methods that are available in the ListIterator interface.
 ### Why raw type collection should be avoided
 whenever we create a collection, we should provide the type of object it can hold. this is called **parameterized type** Collection. a **raw type** Collection does not have any type safety, and an object of any type can be inserted into it. in the below example we have created a raw type ArrayList. Elements of Integer and String are added to it. This code will compile but will fail at run-time with ```ClassCastException```. This would have been avoided if wer had used Parameterized type.
 
+# ArrayList Sorting
+let us see how ArrayList can be sorted
+
+### Sorting an ArrayList in ascending order
+The Collections class contains a ```sort(List<T> list``` method, which is used to sort an ArrayList. This method takes an ArrayList as input and sorts it in ascending order. 
+in the ```sort(List<T> list``` method, T represents the type of object that is sorted in the ArrayList. The ```collections.sort(List<T> list``` method takes an ArrayList of type T objects as the input. it is a must that T should implement the Comparable interface; otherwise the code will not compile. 
+
+There is another way to sort an ArrayList using Streams, which is a Java 8 feature. once we create a stream then we can use the **sorted** method of the **stream** class, which returns the stream of objects in sorted order
+
 
 
 
