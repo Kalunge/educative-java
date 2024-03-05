@@ -56,6 +56,64 @@ list.addaAll(anotherList);
 ```
 ![Screenshot 2024-03-05 at 10.31.05.png](..%2F..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fjd%2F_tr5km9d1bn2rtnrw8k2rxsc0000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_JLP6ms%2FScreenshot%202024-03-05%20at%2010.31.05.png)
 
+```java
+ List list = new ArrayList();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+
+        System.out.println(list);
+
+        list.add(4); // add four to the end of the array
+        System.out.println(list);
+
+        list.add(1, 50);  // add 50 at index 1 and shift all other elements to the right
+        System.out.println(list);
+        
+        List newList = new ArrayList(); // create a new list that will be added to the original list
+        newList.add(159);
+        newList.add(160);
+        
+        list.addAll(newList);
+        System.out.println(list);
+```
+in the above demo, we encouter a warning message stating ```ArrayListDemo.java uses unchecked or unsafe operations```. the reason for this is that our ArrayList is of Raw type meaning that while creating the ArrayList, we did not define what type of elements this ArrayList can hold. if we had defined the type of elements it can hold when we created the ArrayList, then it is called a parameterized type. it can be doe as shown below.
+
+```java
+import java.util.List;
+
+List<String> list = new ArrayList();
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
