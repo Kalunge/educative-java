@@ -166,10 +166,24 @@ in the ```sort(List<T> list``` method, T represents the type of object that is s
 
 There is another way to sort an ArrayList using Streams, which is a Java 8 feature. once we create a stream then we can use the **sorted** method of the **stream** class, which returns the stream of objects in sorted order
 
+### Sorting an ArrayList in descending order
+there is another overloaded version of the sort() method i.e ```sort(list<T> list, Comparator<? super T> c)```, which takes a list and Comparator objects as the input.
 
+The ArrayList can be sorted in reversed order using streams by passing Comparator.reverseOrder() to the sorted method
+in Java 8, the ```sort(Comparator<? super E> c``` method was added to the List interface. if we look at the implementation of the Collections.sort() method, then we will find that it internally calls the sort() method of the List interface. the code is shown below.
 
+```java
+public static <T extends Comparable<? super T>> void sort(List<T> list){
+    list.sort(null);
+}
+```
+let us see how the sort() method of the List interface sorts a list. when the sort() method is called, an array containing all elements in the list is created and sorted. after sorting the array, the list is iterated and each element is reset from the corresponding position in the array.
+the elements are first copied to an array and the sorted because it takes less time to sort a linked list using this approach
 
+## Understanding Comparable Interface
+let us discuss comparable interface in Java
 
+## Comparable Introduction
 
 
 

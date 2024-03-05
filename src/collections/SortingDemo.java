@@ -2,6 +2,7 @@ package collections;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -20,5 +21,12 @@ public class SortingDemo {
 
         List<Integer> sortedList = list.stream().sorted().collect(Collectors.toList());
         System.out.println("ArrayList in ascending order: " + sortedList);
+
+        Collections.sort(list, Collections.reverseOrder());
+//        list.sort(Collections.reverseOrder());
+        System.out.println("ArrayList in descending order: " + list);
+
+        List<Integer> reverseSorted = list.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+        System.out.println("ArrayList in descending order: " + reverseSorted);
     }
 }
