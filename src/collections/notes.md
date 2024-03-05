@@ -145,14 +145,17 @@ The ```Iterator``` provides very limited capabilities as we can iterate only in 
 
 below are the methods that are available in the ListIterator interface.
 1. ```hasNext``` - this method is used to check if there is a next element in the lit when the list is iterated in the forward direction.
-2. ```next()``` - this method returns the next element in the list and advances the cursor positiion. 
-3. ```hasPrevious()``` - this method is used to check if there is a next element in the lizt when the list is iterated in the backward direction
+2. ```next()``` - this method returns the next element in the list and advances the cursor position. 
+3. ```hasPrevious()``` - this method is used to check if there is a next element in the list when the list is iterated in the backward direction
 4. ```previous()``` - this method returns the previous element in the list and moves the cursor position backward
 5. ```nextIndex()``` - this method returns the index of the element that would be returned by a subsequent call to next(). it returns -1 if the listIterator is at the beginning of the list.
 6. ```previousIndex()``` - this method return the index of the element that would have been returned by a subsequent call to precious(). it returns -1 if the list iterator is at the beginning of the list.
 7. ```remove()``` - this method removes the last element that was returned by next() or previous() from the list. this call can only be made once per call to next() or previous(). it can be made only if add() has not been called after the last call to next() or previous()
 8. ```set(E e)``` - this method replaces the last element returned by next() or previous() with the specified element. This call can be made only if neither remove() nor add() have been called after the last call to next() or previous().
 9. ```add(E e)``` - This method inserts the specified element into the list. the element is inserted immediately before the element that would be returned by next(), if any , and after the element that would be returned by previous() if any.
+
+### Why raw type collection should be avoided
+whenever we create a collection, we should provide the type of object it can hold. this is called **parameterized type** Collection. a **raw type** Collection does not have any type safety, and an object of any type can be inserted into it. in the below example we have created a raw type ArrayList. Elements of Integer and String are added to it. This code will compile but will fail at run-time with ```ClassCastException```. This would have been avoided if wer had used Parameterized type.
 
 
 
