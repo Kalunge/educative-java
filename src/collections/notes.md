@@ -112,6 +112,15 @@ we can use the ```clear()``` method to remove all the elements from the ArrayLis
 a new method ```replacAll(UnaryOperator<E> operator```, was added in Java 8.this method takes in a single UnaryOperator type argument. the UnaryOperator interface is a functional interface that has a single abstract method, ```apply()```, that returns a result of the same object type as the operrand.
 let us say we have an ArrayList that contains String objects; we need to make all the elements in this list uppercase. in this case, we can use the ```replaceAll``` method and provide it with lambda expression that converts each element into uppercase.
 
+## Additional operations in ArrayList
+### updating an element in ArrayList
+to update an element in ArrayList, the ```set(int index, E e)``` method can be used. this method takes the idnex, which needs to be updated and a new value. 
+
+### checking if an element is present in the arraylist
+to check if an element is present in the list, we can use the ```contains(Object o)``` method. this method returns true if the element is present in the lst; otherwise, it returns false.
+
+if we need the index of the first occurrence of the element, then the ```indexOf(Object o)``` method can be used. and if we need the last occurrence of the element ```lastIndexOf(object o)``` can be used.
+
 
 
 
