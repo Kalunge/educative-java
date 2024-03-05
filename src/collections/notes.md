@@ -90,9 +90,23 @@ creating a parameterized Collection is very important. without it, there can be 
 ### Fetching elements form an ArrayList
 to fetch an element from ArrayList, we can use the ```get(int index)``` method. this method takes an ```index``` as input and returns the element at that index. the index provided should be equal or greater than zero and should be lesst than the ArrayList size. 
 we can fetch the size of the array using size() method.
+## Removing elements form an ArrayList
+elements can be removed from an ArrayList in the following ways.
 
+### Removing an element at a particular index
+we can use the remove(int index) method to remove an element at a particular index. the index should be less than the size of ArrayList, otherwise, ```IndexOutOfBoundsException``` will be thrown. 
+![Screenshot 2024-03-05 at 10.51.41.png](..%2F..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fjd%2F_tr5km9d1bn2rtnrw8k2rxsc0000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_sBTQMd%2FScreenshot%202024-03-05%20at%2010.51.41.png)
+### Removing a particular element from the ArrayList
+we can also specify that we want to remove using remove(object o) method, and the first occurence of that element will be removed.
+![Screenshot 2024-03-05 at 10.52.54.png](..%2F..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fjd%2F_tr5km9d1bn2rtnrw8k2rxsc0000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_kyVWDs%2FScreenshot%202024-03-05%20at%2010.52.54.png)
+### Removing all the elements within a range
+let us suppose we need to remove all the elements from index 5 to 9. this can be done using the ```removeRange(int fromIndex, int toIndex)``` method. this method will remove, from this list, all of the elements whose index is between fromIndex, inclusive, and toIndex, exclusive. please note that this method is not defined in the List class. so, it can be used only when the reference type is also ArrayList and not List. 
+![Screenshot 2024-03-05 at 10.56.02.png](..%2F..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fjd%2F_tr5km9d1bn2rtnrw8k2rxsc0000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_KmCmdH%2FScreenshot%202024-03-05%20at%2010.56.02.png)
+### Removing all the elements within a given collection
+we can use the ```removeAll(Collection<?> c)``` method to remove, from the given list, all of the elements that are contained in the specified collection.
 
-
+### Removing all the elements from the ArrayList
+we can use the ```clear()``` method to remove all the elements from the ArrayList
 
 
 
