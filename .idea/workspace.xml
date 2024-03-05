@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97a6042a-5015-43f1-9889-c8c78113e8fd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/challenge/ChallengeEmployee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/challenge/MainChallenge.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/collections/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/collections/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/collections/notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/collections/notes.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +48,7 @@
     "Application.ListIteratorDemo.executor": "Run",
     "Application.Loops.executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.MainChallenge.executor": "Run",
     "Application.Operations.executor": "Run",
     "Application.OtherOperations.executor": "Run",
     "Application.RawTypeArrayList.executor": "Run",
@@ -55,7 +56,7 @@
     "Application.Vehicle$VehicleDemo.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "challenge",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -65,7 +66,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Vehicle$VehicleDemo">
+  <component name="RunManager" selected="Application.MainChallenge">
     <configuration name="Employee$ArrayListDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="collections.Employee$ArrayListDemo" />
       <module name="educative-java" />
@@ -79,12 +80,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ListIteratorDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="collections.ListIteratorDemo" />
+    <configuration name="MainChallenge" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="challenge.MainChallenge" />
       <module name="educative-java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="collections.*" />
+          <option name="PATTERN" value="challenge.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,11 +134,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainChallenge" />
         <item itemvalue="Application.Vehicle$VehicleDemo" />
         <item itemvalue="Application.Employee$ArrayListDemo" />
         <item itemvalue="Application.SortingDemo" />
         <item itemvalue="Application.RawTypeArrayList" />
-        <item itemvalue="Application.ListIteratorDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -152,7 +153,7 @@
       <workItem from="1709031009394" duration="4914000" />
       <workItem from="1709116910961" duration="2129000" />
       <workItem from="1709303395788" duration="187000" />
-      <workItem from="1709616432738" duration="16559000" />
+      <workItem from="1709616432738" duration="18004000" />
     </task>
     <servers />
   </component>
