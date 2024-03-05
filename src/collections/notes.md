@@ -240,9 +240,19 @@ public class Employee {
 
 ```
 in the example below the ```Employee``` class implements the ```Comparable``` interface. the code will run successfully and will sort the Employee objects in ascending order of their age
+### How to write implementation of the compareTo method
+let us say you have a custom class, and you need to write the implementation of the ```compareTo()``` method. 
+the first step will be to select the fields within that class where you need to sort the objects. for example, if you have a vehicle class then you would like to sort it on the basis of the year it was sold. 
+once you have decided the field where the sorting will be done , then the second step will be to write the implementation of the ```compareTo(T o)``` method. the ```compareTo(T o)``` takes only one object as an input. the comparison is made with the calling object. let us say we have two Vehicle class obects
 
-
-
+```java
+Vehicle v1 = new Vehicle();
+Vehicle v2 = new Vehicle();
+```
+then ```v1.compareTo(v2)``` should return;
+1. -1 if the production year of v1 is less than that of v2
+2. 1 if the production year of v1 is greater than that of v2
+3. 0 if the production year of v1 is equal to that of v2
 
 
 
