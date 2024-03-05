@@ -121,6 +121,21 @@ to check if an element is present in the list, we can use the ```contains(Object
 
 if we need the index of the first occurrence of the element, then the ```indexOf(Object o)``` method can be used. and if we need the last occurrence of the element ```lastIndexOf(object o)``` can be used.
 
+## ArrayList Iteration
+there are different ways of iterating over an ArrayList
+
+### Using for loop
+an ArrayList can be iterated easily using a simple **for** loop or an enhanced **for** loop as shown below
+
+### using Iterator
+
+the ```Iterator()``` method in ArrayList returns an ```Iteratot``` type object. the Iterator interface declares the below methods that help with iterating an ArrayList
+
+1. ```hasNext()``` - this method returns true if there are more elemets in the list; otherwise, it returns false.
+2. ```next()``` - this method returns the next element in the list. before calling it, we should always call ```hasNext``` to verify that there is an element; otherwise, ```NoSuchElementException``` will be thrown.
+3. ```remove()``` - this method removes the las element returned by the iterator. it can be called only once per call to the ```next()```
+4. ```forEachRemaining(Consumer<? super E> action)``` - this method was introduced in Java 8. it performs the given action for each remaining element untill all elements have been processed or the action throws an exception. this method's benefit is that we do not need to check if there is a next element every time.
+5. 
 
 
 
