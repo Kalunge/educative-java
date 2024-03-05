@@ -262,6 +262,8 @@ if we need to use the comparator interface, then we cannot use the collections.s
 
 the below code shows how to create a custom Comparator. we will create two custom comparators: one for sorting by brand and one for sorting by year. 
 
+we can also use an anonymous class in the sort method instead of creating a separate class that implements Comparator. This is shown in the below example.
+
 
 
 

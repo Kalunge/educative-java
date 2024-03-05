@@ -62,6 +62,22 @@ public class Vehicle implements Comparable<Vehicle> {
                 System.out.println("Vehicle Brand: " + vehicle.brand + ", Vehicle Make: " + vehicle.makeYear);
             }
 
+            System.out.println();
+
+            Collections.sort(vehicles, new Comparator<Vehicle>() {
+                @Override
+                public int compare(Vehicle o1, Vehicle o2) {
+                    return o1.makeYear.compareTo(o2.makeYear);
+                }
+            });
+
+            Collections.sort(vehicles, new Comparator<Vehicle>() {
+                @Override
+                public int compare(Vehicle o1, Vehicle o2) {
+                    return o1.brand.compareTo(o2.brand);
+                }
+            });
+
 
         }
     }
