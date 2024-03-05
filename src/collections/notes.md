@@ -58,24 +58,24 @@ list.addaAll(anotherList);
 
 ```java
  List list = new ArrayList();
-        list.add(1);
-        list.add(2);
-        list.add(3);
+list.add(1);
+list.add(2);
+list.add(3);
 
-        System.out.println(list);
+System.out.println(list);
 
-        list.add(4); // add four to the end of the array
-        System.out.println(list);
+list.add(4); // add four to the end of the array
+System.out.println(list);
 
-        list.add(1, 50);  // add 50 at index 1 and shift all other elements to the right
-        System.out.println(list);
-        
-        List newList = new ArrayList(); // create a new list that will be added to the original list
-        newList.add(159);
-        newList.add(160);
-        
-        list.addAll(newList);
-        System.out.println(list);
+list.add(1, 50);  // add 50 at index 1 and shift all other elements to the right
+System.out.println(list);
+
+List newList = new ArrayList(); // create a new list that will be added to the original list
+newList.add(159);
+newList.add(160);
+
+list.addAll(newList);
+System.out.println(list);
 ```
 in the above demo, we encouter a warning message stating ```ArrayListDemo.java uses unchecked or unsafe operations```. the reason for this is that our ArrayList is of Raw type meaning that while creating the ArrayList, we did not define what type of elements this ArrayList can hold. if we had defined the type of elements it can hold when we created the ArrayList, then it is called a parameterized type. it can be doe as shown below.
 
@@ -84,9 +84,12 @@ import java.util.List;
 
 List<String> list = new ArrayList();
 ```
+so, we need to provide the type of object wth <> while creating the list.
+creating a parameterized Collection is very important. without it, there can be serious errors, which we will se e in the next lesson when we discuss ArrayList iteration.
 
-
-
+### Fetching elements form an ArrayList
+to fetch an element from ArrayList, we can use the ```get(int index)``` method. this method takes an ```index``` as input and returns the element at that index. the index provided should be equal or greater than zero and should be lesst than the ArrayList size. 
+we can fetch the size of the array using size() method.
 
 
 

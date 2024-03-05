@@ -25,5 +25,15 @@ public class ArrayListDemo {
         list.addAll(newList);
         System.out.println(list);
 
+
+        List<Integer> myList = new ArrayList<>();
+        myList.add(1);
+        myList.add(2);
+        myList.add(3);
+        myList.add(4);
+        System.out.println(myList);
+        System.out.println("the element at index 2 is "+ myList.get(2));
+        System.out.println("the size of the list is "+ myList.size());
+
     }
 }
