@@ -23,7 +23,15 @@ public class ArrayListPractice {
                 itr.remove();
             }
         }
-
         System.out.println(list);
+
+
+        Iterator<Integer> anotherIterator = list.iterator();
+        list.add(50);
+
+        while (anotherIterator.hasNext()) {
+            System.out.println(anotherIterator.next()); // throws ConcurrentModificationException
+        }
+
     }
 }
