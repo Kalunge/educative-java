@@ -184,10 +184,62 @@ the elements are first copied to an array and the sorted because it takes less t
 let us discuss comparable interface in Java
 
 ## Comparable Introduction
+```Collections.sort()``` method sorts the given List in ascending order. But the question is, how does the ```sort()``` method decide which element is smaller and which one is larger?
+
+Each wrapper class, String class, and Date class implements an interface called **Comparable**. This interface contains ```compareTo()``` method which is used by sorting methods to sort the Collection. This method returns a negative integer, zero or a positive integer if **this** object is less than. equal to, or greater than the object passed as an argument. 
+**if we use the ```Collections.sort(List<T> list)``` method to sort an ArrayList, then the class whose objects are stored in the ArrayList must implement the Comparable interface. if the ArrayList stores an Integer, a Long, or a String, the we don't need to worry as these classes already implement the Comparable interface. but if the **ArrayList** stores a custom class object, then that class must implement the Comparable interface.**
+in the given example, we have a custom class called ```Employee```. we have stored some ```Employee``` objects in an **ArrayList**, and we need to sort it. the below example will not compile as the Employee class does not implement the Comparable interface.
+```java
+package collections;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Employee {
+    String name;
+    int age;
+
+    public Employee(String name, int age) {
+        super();
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public static class ArrayListDemo {
+        public static void main(String[] args) {
+            List<Employee> list = new ArrayList<>();
+            list.add(new Employee("Jane", 29));
+            list.add(new Employee("Alex", 54));
+
+            Collections.sort(list);
+            System.out.println("Employees in asc order: " + list);
+
+        }
+    }
 
 
+}
 
 
+```
+in the example below the ```Employee``` class implements the ```Comparable``` interface. the code will run successfully and will sort the Employee objects in ascending order of their age
 
 
 
