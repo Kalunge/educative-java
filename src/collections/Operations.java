@@ -26,5 +26,14 @@ public class Operations {
         list.clear(); // remove all the elements from the list
         System.out.println(list);
 
+        List<String> stringList = new ArrayList<>();
+        stringList.add("apple");
+        stringList.add("banana");
+
+//        stringList.replaceAll((element) -> element.toUpperCase());
+        stringList.replaceAll(String::toUpperCase);
+
+        System.out.println(stringList);
+
     }
 }

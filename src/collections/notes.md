@@ -108,6 +108,10 @@ we can use the ```removeAll(Collection<?> c)``` method to remove, from the given
 ### Removing all the elements from the ArrayList
 we can use the ```clear()``` method to remove all the elements from the ArrayList
 
+### Replacing all the elements of the ArrayList
+a new method ```replacAll(UnaryOperator<E> operator```, was added in Java 8.this method takes in a single UnaryOperator type argument. the UnaryOperator interface is a functional interface that has a single abstract method, ```apply()```, that returns a result of the same object type as the operrand.
+let us say we have an ArrayList that contains String objects; we need to make all the elements in this list uppercase. in this case, we can use the ```replaceAll``` method and provide it with lambda expression that converts each element into uppercase.
+
 
 
 
