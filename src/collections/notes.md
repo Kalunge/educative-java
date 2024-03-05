@@ -255,9 +255,12 @@ then ```v1.compareTo(v2)``` should return;
 3. 0 if the production year of v1 is equal to that of v2
 
 
+## Understanding Comparator Interface
+one of the major drawbacks of using a comparable interface is that the comparing logic gets fixed. for instance, if we have a vehicle class, then it can be sorted either on the basis of the brand or the production year depending on the implemntation of the ```compareTo``` method.
+if we need some flexibility in sorting, we should use the Comparator interface instead of the Comparable interface. the Comparator interface has a method, ```compare(T o1, T o2),``` which takes two objects , o1 and o2 as parameters. it returns -1 if o1 < o2, 1 if o1 > o2 and 0 if o1 is equal to o2.
+if we need to use the comparator interface, then we cannot use the collections.sort(List<T> list) method as T should implement the comparable interface. there is another overloaded method, ```sort(List<T> list, Comparator<? super T> c)```, that takes the list as well as a Comparator object as input. it then sorts the list on the basis of logic , which is provided in the Comparator implementation.
 
-
-
+the below code shows how to create a custom Comparator. we will create two custom comparators: one for sorting by brand and one for sorting by year. 
 
 
 

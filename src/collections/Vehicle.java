@@ -2,6 +2,7 @@ package collections;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Vehicle implements Comparable<Vehicle> {
@@ -25,13 +26,13 @@ public class Vehicle implements Comparable<Vehicle> {
 
     public static class VehicleDemo {
         public static void main(String[] args) {
-            Vehicle v1 = new Vehicle(2022);
+            Vehicle v1 = new Vehicle(2022, "Nissan");
 
-            Vehicle v2 = new Vehicle(1994);
+            Vehicle v2 = new Vehicle(1994, "Lexus");
 
-            Vehicle v3 = new Vehicle(2027);
+            Vehicle v3 = new Vehicle(2027, "Prado");
 
-            Vehicle v4 = new Vehicle(2000);
+            Vehicle v4 = new Vehicle(2000, "Outback");
 
             List<Vehicle> vehicles = new ArrayList<>();
 
@@ -40,13 +41,42 @@ public class Vehicle implements Comparable<Vehicle> {
             vehicles.add(v3);
             vehicles.add(v4);
 
+            System.out.println("Sorting by Comparable");
             Collections.sort(vehicles);
-
             for (Vehicle vehicle : vehicles) {
                 System.out.println(vehicle.makeYear);
             }
 
+            System.out.println();
 
+            System.out.println("Sorting by brand name using BrandComparator");
+            Collections.sort(vehicles, new BrandComparator());
+            for (Vehicle vehicle : vehicles) {
+                System.out.println("Vehicle Brand: " + vehicle.brand + ", Vehicle Make: " + vehicle.makeYear);
+            }
+            System.out.println();
+
+            System.out.println("Sorting by brand year using BrandMakeYear");
+            Collections.sort(vehicles, new MakeYearComparator());
+            for (Vehicle vehicle : vehicles) {
+                System.out.println("Vehicle Brand: " + vehicle.brand + ", Vehicle Make: " + vehicle.makeYear);
+            }
+
+
+        }
+    }
+
+    public static class MakeYearComparator implements Comparator<Vehicle> {
+        @Override
+        public int compare(Vehicle vehicleOne, Vehicle vehicleTwo) {
+            return vehicleOne.makeYear.compareTo(vehicleTwo.makeYear);
+        }
+    }
+
+    public static class BrandComparator implements Comparator<Vehicle> {
+        @Override
+        public int compare(Vehicle vehicleOne, Vehicle vehicleTwo) {
+            return vehicleOne.brand.compareTo(vehicleTwo.brand);
         }
     }
 }
