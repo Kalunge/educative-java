@@ -464,7 +464,27 @@ there is an ```add(E e)``` method available that inserts an element into the **H
 
 ### Fetching an element from a HashSet
 unlike ArrayList, there is not ```get()``` method in HashSet because a HashSet is not backed by an array. The elements are stored in random order in a HashSet, and we cant get aa particular element. if we want to check whether a particular element is in the HashSet or not, then we can use the ```contains()``` method.
+```java
+package hashset;
 
+import java.util.HashSet;
+import java.util.Set;
+
+public class HashSetDemo {
+    public static void main(String[] args) {
+        Set<Integer> set = new HashSet<>();
+
+        System.out.println("Inserting 23 in the HashSet: " + set.add(23)); // returns true
+        System.out.println("Inserting 27 in the HashSet: " + set.add(27)); // returns true
+        System.out.println("Inserting 23 in the HashSet: " + set.add(23)); // returns false as the element is already present
+
+        System.out.println(set);
+
+        System.out.println(set.contains(23));
+    }
+}
+
+```
 
 
 
