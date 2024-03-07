@@ -26,6 +26,9 @@ public class LinkedListDemo {
 
         linkedList.addAll(3, list); //adds a collection of elements at third position in the list.
         System.out.println(linkedList);
+        System.out.println(linkedList.getFirst()); // fetching the first element
+        System.out.println(linkedList.get(3)); // fetching the element at the third index
+        System.out.println(linkedList.getLast()); // fetching the last element
     }
 
 }

@@ -338,6 +338,16 @@ list.addAll(anotherList);
 ### Inserting multiple elements from another collection at a particular index
 if we have a collection and we need to add all its elements to another LinkedList at a particular index, then the ```addAll(int index, Collection c)``` method can be used. this method inserts all the elements in the specified collection into this list starting at the specified location.
 
+## LinkedList Fetching and removing
+let us discuss how to fetch and remove elements from a LinkedList
+
+## Fetching element from a LinkedList
+### Fetching the first element
+we can use the ```getFist()``` method to fetch the first element in the list. if the LinkedList is empty, then ```NoSuchElementException``` is thrown. 
+### Fetching the last element
+we can use the ```getLast``` method to fetch the last element in the list. if LinkedList is empty, then ```NoSuchElementException``` is thrown. 
+### Fetching element at a particular index
+we can fetch an element at a particular index by using the ```get(ind index)``` method. the index should be more than zero and less than the size of the LinkedList; otherwise, ```OndexOutOfBoundsException``` will be thrown. 
 
 
 
