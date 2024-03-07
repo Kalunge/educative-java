@@ -497,6 +497,8 @@ we can use the ```remove(Object o)``` method to remove an element from HashSet. 
 ### Using the ```clear()``` method.
 we can use the clear method to remove all the elements from a HashSet
 
+## Checking if the HashSet is empty
+we can check if the HashSet is empty using the ```isEmpty()``` method. this method returns true if the Set does not have elements and returns false if the Set has some elements.
 
 
 

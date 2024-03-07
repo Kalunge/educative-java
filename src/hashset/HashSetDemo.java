@@ -18,7 +18,9 @@ public class HashSetDemo {
 
         set.remove(23);
         System.out.println("Hashset after removing one element: " + set);
-        set.clear();
+        System.out.println(set.isEmpty());
+        set.clear(); // returns false as set has some elements
         System.out.println("Hashset after removing all elements: " + set);
+        System.out.println(set.isEmpty()); // returns true after clear
     }
 }
