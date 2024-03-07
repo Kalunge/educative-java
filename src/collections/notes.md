@@ -460,10 +460,10 @@ we can also provide initial capacity along with the load factor while creating t
 ### Using the constructor that takes another Set as a parameter
 we can also create a HashSet using another Set by passing it to the constructor. the newly created HashSet will have the same size as that of the passed Set, whereas the load factor will default to 0.75
 ## Inserting an element into a HashSet
+there is an ```add(E e)``` method available that inserts an element into the **HashSet**. if the element is not already present, then this method puts the element and returns ```true```. if the element is already present, then it returns false.
 
-
-there is an ```add(E e)``` method available that inserts an element into the **HashSet**. if the element is not already present, then this method puts the element and returns ```true```. if the elemet is already present, then it returns false.
-
+### Fetching an element from a HashSet
+unlike ArrayList, there is not ```get()``` method in HashSet because a HashSet is not backed by an array. The elements are stored in random order in a HashSet, and we cant get aa particular element. if we want to check whether a particular element is in the HashSet or not, then we can use the ```contains()``` method.
 
 
 

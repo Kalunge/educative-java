@@ -12,5 +12,7 @@ public class HashSetDemo {
         System.out.println("Inserting 23 in the HashSet: " + set.add(23)); // returns false as the element is already present
 
         System.out.println(set);
+
+        System.out.println(set.contains(23));
     }
 }
