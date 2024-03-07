@@ -542,6 +542,11 @@ a Hashset can be easily iterated over using an enhanced for loop as shown below
 Hashset can also be iterated using an iterator as shown in the below example.
 
 ## Using for each method
+we can use ```forEach(Consumer<? suoper T>action)``` method defined in the ```Iterable``` class. This method was introduced in Java 8. it accepts an action that needs to be performed for each element as a parameter.
+
+## Sorting a HashSet
+since a **HashSet** stores the elements in random order, it is not possible to store the elements in a HashSet in sorted order. if we want to sort the elements of a HashSet, then we should convert it into some other collection such as a List, TreeSet or linkedhashset.
+Here we will see how we can convert a HashSet to an ArrayList, and then we can use the elements from the List. we can create an arrayList by sending another collection to its constructor. we can sort this ArrayList using the sort() method of the Collections class.
 
 
 

@@ -1,8 +1,6 @@
 package hashset;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 
 public class HashSetDemo {
     public static void main(String[] args) {
@@ -15,7 +13,7 @@ public class HashSetDemo {
         System.out.println();
         System.out.println("Iterating the set using for loop");
 
-        for(int i : set) {
+        for (int i : set) {
             System.out.println(i);
         }
         System.out.println("End of iteration");
@@ -34,6 +32,15 @@ public class HashSetDemo {
 
         set.forEach(elem -> System.out.println(elem));
 //        set.forEach(System.out::println); // using lambda
+        set.add(5);
+        set.add(7);
+
+        List<Integer> list = new ArrayList<>(set); // creating an arraylist from an existing set
+        Collections.sort(list); // sorting the list
+
+        System.out.println("Sorted list: ");
+
+        list.forEach(System.out::println);
 
         System.out.println(set);
 
@@ -45,5 +52,8 @@ public class HashSetDemo {
         set.clear(); // returns false as set has some elements
         System.out.println("Hashset after removing all elements: " + set);
         System.out.println(set.isEmpty()); // returns true after clear
+
+
+
     }
 }
