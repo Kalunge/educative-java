@@ -1,6 +1,7 @@
 package hashset;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 public class HashSetDemo {
@@ -11,6 +12,23 @@ public class HashSetDemo {
         System.out.println("Inserting 27 in the HashSet: " + set.add(27)); // returns true
         System.out.println("Inserting 23 in the HashSet: " + set.add(23)); // returns false as the element is already present
         set.add(56);
+        System.out.println();
+        System.out.println("Iterating the set using for loop");
+
+        for(int i : set) {
+            System.out.println(i);
+        }
+        System.out.println("End of iteration");
+        System.out.println();
+
+        System.out.println("Iterating the set using Iterator");
+
+
+        Iterator<Integer> iterator = set.iterator();
+
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
 
         System.out.println(set);
 
