@@ -1,7 +1,6 @@
 package hashmap;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class HashMapDemo {
     public static void main(String[] args) {
@@ -47,6 +46,18 @@ public class HashMapDemo {
 
         System.out.println(stockPrice.containsKey("Microsoft")); // returns true
         System.out.println(stockPrice.containsValue(1213)); // returns true
+
+        System.out.println("HashMap keys");
+        Set<String> keys = stockPrice.keySet();
+        for (String key : keys) {
+            System.out.println(key);
+        }
+
+        System.out.println("HashMap values");
+        Collection<Integer> values = stockPrice.values();
+        for (int value : values) {
+            System.out.println(value);
+        }
 
     }
 }

@@ -683,6 +683,12 @@ let's discuss some HashMap operations
 ## Checking if a key is present in the HashMap
 we can use the ```containsKey(Object kye)``` method to check if a given key is present in the HashMap. this method returns true if the ley is present and returns false if the key is not present. Similarly, we have a ```containsValue(Object value)``` method that retuns if one or more keys are mapped to this value.
 
+## Fetching all the keys from HashMap
+if we need to fetch all keys that are stored in a HashMap, then we can use the ```keySet()``` method. This method returns a Set containing all the keys present in the map.
+
+## Fetching all the values from HashMap
+if we need to fetch all the values stored in a HashMap, we can use the ```values()``` method. This method returns a Collection containing all the values present in the Map.
+
 
 
 
