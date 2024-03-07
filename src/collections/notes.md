@@ -361,6 +361,10 @@ we can remove an element at a particular index by using the ```remove(int index)
 ### Removing a particular element
 we can use the ```remove(object o)``` method to remove a particular element from the LinkedList. if there is more than one occurrence of a particular element, the first occurrence is removed. if we want to remove the last occurrence of an element , the ```removeLastOccurrence()``` method can be used.
 
+## Sorting LinkedList
+
+to sort a **LinkedList** we can use the ```sort()``` method of the Collections class as shown. 
+
 
 
 

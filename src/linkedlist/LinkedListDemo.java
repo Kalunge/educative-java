@@ -1,6 +1,7 @@
 package linkedlist;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -51,6 +52,9 @@ public class LinkedListDemo {
 
         linkedList.removeLastOccurrence(4); // removes the last occurrence of 4
         System.out.println("LinkedList after removing  the last occurrence of 4: " +linkedList);
+
+        Collections.sort(linkedList);
+        System.out.println("sorted linkedList: " + linkedList);
 
     }
 
