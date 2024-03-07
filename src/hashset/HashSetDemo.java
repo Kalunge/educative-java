@@ -10,9 +10,15 @@ public class HashSetDemo {
         System.out.println("Inserting 23 in the HashSet: " + set.add(23)); // returns true
         System.out.println("Inserting 27 in the HashSet: " + set.add(27)); // returns true
         System.out.println("Inserting 23 in the HashSet: " + set.add(23)); // returns false as the element is already present
+        set.add(56);
 
         System.out.println(set);
 
         System.out.println(set.contains(23));
+
+        set.remove(23);
+        System.out.println("Hashset after removing one element: " + set);
+        set.clear();
+        System.out.println("Hashset after removing all elements: " + set);
     }
 }

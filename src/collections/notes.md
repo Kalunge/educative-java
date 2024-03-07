@@ -486,6 +486,16 @@ public class HashSetDemo {
 
 ```
 
+## HashSet Operations
+let us discuss some operations that can be done on HashSet
+
+## Removing an element from a HashSet
+below are the ways that we can remove an element from the HashSet
+
+### using the ```remove(Object o)``` method
+we can use the ```remove(Object o)``` method to remove an element from HashSet. This method takes an object that needs to be removed as a parameter. if the element is removved, the this method returns ```true```. if the element is not present, then it returns ```false```.
+### Using the ```clear()``` method.
+we can use the clear method to remove all the elements from a HashSet
 
 
 
