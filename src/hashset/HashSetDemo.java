@@ -30,6 +30,11 @@ public class HashSetDemo {
             System.out.println(iterator.next());
         }
 
+        System.out.println("Iterating the set using forEach");
+
+        set.forEach(elem -> System.out.println(elem));
+//        set.forEach(System.out::println); // using lambda
+
         System.out.println(set);
 
         System.out.println(set.contains(23));

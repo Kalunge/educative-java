@@ -536,12 +536,12 @@ let us look at different ways to iterate over a **HashSet**
 below are the different methods to iterate a HashSet
 
 ### Using for loop
-a hashset can be easily iterated over using an enhanced for loop as shown below
+a Hashset can be easily iterated over using an enhanced for loop as shown below
 
 ### Using Iterator
+Hashset can also be iterated using an iterator as shown in the below example.
 
-
-
+## Using for each method
 
 
 
