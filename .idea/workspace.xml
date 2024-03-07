@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97a6042a-5015-43f1-9889-c8c78113e8fd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/collections/notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/collections/notes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hashset/HashSetDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hashset/HashSetDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/challenge/HashSetChallenge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +42,7 @@
     "Application.ArrayListDemo.executor": "Run",
     "Application.ArrayListPractice.executor": "Run",
     "Application.Employee$ArrayListDemo.executor": "Run",
+    "Application.HashSetChallenge.executor": "Run",
     "Application.HashSetDemo.executor": "Run",
     "Application.Iteration.executor": "Run",
     "Application.IterationDemo.executor": "Run",
@@ -67,13 +68,13 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.HashSetDemo">
-    <configuration name="Employee$ArrayListDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="collections.Employee$ArrayListDemo" />
+  <component name="RunManager" selected="Application.HashSetChallenge">
+    <configuration name="HashSetChallenge" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="challenge.HashSetChallenge" />
       <module name="educative-java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="collections.*" />
+          <option name="PATTERN" value="challenge.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -135,11 +136,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HashSetChallenge" />
         <item itemvalue="Application.HashSetDemo" />
         <item itemvalue="Application.LinkedListDemo" />
         <item itemvalue="Application.MainChallenge" />
         <item itemvalue="Application.Vehicle$VehicleDemo" />
-        <item itemvalue="Application.Employee$ArrayListDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -155,7 +156,7 @@
       <workItem from="1709116910961" duration="2129000" />
       <workItem from="1709303395788" duration="187000" />
       <workItem from="1709616432738" duration="18004000" />
-      <workItem from="1709788599648" duration="8330000" />
+      <workItem from="1709788599648" duration="8996000" />
     </task>
     <servers />
   </component>
