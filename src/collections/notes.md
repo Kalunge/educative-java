@@ -626,6 +626,28 @@ the ```putIfAbsent(K key, V value)``` method inserts a key-value pair only if it
 the ```putAll(Map<? extends K, ? extends V< m)``` method copies all of the mappings from the specified map to this map. these mappings will replace any mappings this map had for any of the keys currently in the specified map
 
 the below code shows HashMap working properly
+```java
+package hashmap;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class HashMapDemo {
+    public static void main(String[] args) {
+        Map<String, Integer> stockPrice = new HashMap<>();
+        stockPrice.put("Oracle", 56); // inserting share price of oracle into the map
+        System.out.println(stockPrice);
+
+        stockPrice.put("Oracle", 70); // inserting share price of oracle again, this should update the existing value
+        System.out.println(stockPrice);
+
+        stockPrice.putIfAbsent("Oracle", 100); // inserting share price of oracle again using puIfAbsent
+        System.out.println(stockPrice);
+
+    }
+}
+
+```
 
 
 
