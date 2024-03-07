@@ -689,6 +689,9 @@ if we need to fetch all keys that are stored in a HashMap, then we can use the `
 ## Fetching all the values from HashMap
 if we need to fetch all the values stored in a HashMap, we can use the ```values()``` method. This method returns a Collection containing all the values present in the Map.
 
+## Checking if the HashMap is empty
+we can check if the HashMap is empty using the ```isEmpty()``` method. This method returns true if the Map does not have any elements and returns false if the Map has soe elements.
+
 
 
 

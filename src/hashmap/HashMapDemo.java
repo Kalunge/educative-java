@@ -59,5 +59,10 @@ public class HashMapDemo {
             System.out.println(value);
         }
 
+        Map<String, Integer> map = new HashMap<>();
+        System.out.println(map.isEmpty());
+
+        System.out.println(stockPrice.isEmpty());
+
     }
 }
