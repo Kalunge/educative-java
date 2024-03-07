@@ -264,6 +264,123 @@ the below code shows how to create a custom Comparator. we will create two custo
 
 we can also use an anonymous class in the sort method instead of creating a separate class that implements Comparator. This is shown in the below example.
 
+## LinkedList
+The **LinkedList** class in Java implements the **List** and the **Deque** interface. some of the salient features of a LinkedList are:
+* the elements are stored in the order of insertion
+* it supports duplicate elements
+* we can add any number of null elements
+![Screenshot 2024-03-07 at 08.19.52.png](..%2F..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fjd%2F_tr5km9d1bn2rtnrw8k2rxsc0000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_ZfQupb%2FScreenshot%202024-03-07%20at%2008.19.52.png)
+## Internal implementation of a LinkedList
+the **LinkedList** class has a static inner class called **Node**. this class contains three fields
+* **item** - This contains the value of the current element
+* **next** - this contains te pointer to the next element. 
+* **prev** - this contains the pointer to the previous element
+
+```java
+public static class Node<E> {
+        E item;
+        Node<E> next;
+        Node<E> prev;
+
+        Node(Node<E> prev, E element, Node<E> next) {
+            this.item = element;
+            this.next = next;
+            this.prev = prev;
+        }
+
+    }
+```
+when an element is added to the LinkedList, a new Node instance is created. Depending on where the new node is being added, the **prev** and **next** fields are set.
+when a Node at index i is removed, the next field of node at index i - 1 is set to the node at index i + 1. Similarly, the prev field of node at index i + 1 is set to node i - 1
+![Screenshot 2024-03-07 at 08.27.39.png](..%2F..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fjd%2F_tr5km9d1bn2rtnrw8k2rxsc0000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_4IA3aL%2FScreenshot%202024-03-07%20at%2008.27.39.png)
+
+## Time complexities for LinkedList operations
+let us see what time complexities are for different operations in a LinkedList
+
+### Adding an element
+the complexity of adding an element to a LinkedList is O(1). if we need to search for the position where the Node needs to be inserted, the time complexity is O(n), but the element is usually inserted at the beginning or end which makes it O(1)
+the biggest benefit of LinkedList, in comparison to an array, is that when new elements are added or removed , the other elements are not rearranged.
+### Removing an element
+removing an element is also a O(1)operation if we are aware of the position of the element that needs to be removed. if we need to search and remove an element, it is an O(n) operation
+
+### Searching for an element
+searching an element is an O(n) operation, as the entire LinkedList is iterated to search the element in the worst case.
+
+## Creating a LinkedList
+there are two ways to create a LinkedList
+### Using the no-arg constructor
+the default constructor does not take any arguments and creates a LinkedList of size zero. below is the syntax to create LinkedList using the default constructor.
+
+```java
+import java.util.LinkedList;
+
+List<Integer> list = new LinkedList<Integer>();
+```
+
+### Using existing collection
+a LinkedList can also be created using an existing **Collection**. the newly created LinkedList will contain all the elements in the same order as the original Collection.
+
+## Inserting an element into a LinkedList
+let us look at various ways of inserting an element into a LinkedList
+
+### inserting a single element at the end
+To insert a single element at the end we can use the ```add(E e) ```or ```addLast(E e)``` method. These methods insert the given element at the end of the list and do not return anything
+### inserting a single element at the beginning
+we can use the ```addFirst(E e)``` method to insert an element at the beginning
+### inserting an element at a particular index
+we can use the ```add(int index, E element)``` method to insert an element at a particular index. the index should be greater than zero and less than the size of the LinkedList; otherwise ```IndexOutOfBoundsException``` is thrown
+
+### Inserting multiple elements from another collection
+if we have a collection and we need to add all its elements to another **LinkedList**, then the ```addAll(collection c)``` method can be used. This method will add all the elements at the end of the LinkedList.
+```java
+list.addAll(anotherList);
+```
+### Inserting multiple elements from another collection at a particular index
+if we have a collection and we need to add all its elements to another LinkedList at a particular index, then the ```addAll(int index, Collection c)``` method can be used. this method inserts all the elements in the specified collection into this list starting at the specified location.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
