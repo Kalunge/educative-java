@@ -45,5 +45,8 @@ public class HashMapDemo {
         System.out.println(stockPrice.remove("Google")); // will return null as Google is not in the Map
         System.out.println(stockPrice.remove("BMW", 30)); // will return false as 30 is not the value of BMW
 
+        System.out.println(stockPrice.containsKey("Microsoft")); // returns true
+        System.out.println(stockPrice.containsValue(1213)); // returns true
+
     }
 }

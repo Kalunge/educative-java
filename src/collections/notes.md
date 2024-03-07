@@ -677,8 +677,11 @@ an element can be easily removed from the **HashMap** using the ```remove(Object
 
 another overloaded version of this method ```remove(Object key, Object value)``` was aded in Java 8. this method removes a key only if is is currently mapped to the sepcified value. this method returns true if the key is removed; otherwise it returns false. 
 
+## HashMap Operations
+let's discuss some HashMap operations
 
-
+## Checking if a key is present in the HashMap
+we can use the ```containsKey(Object kye)``` method to check if a given key is present in the HashMap. this method returns true if the ley is present and returns false if the key is not present. Similarly, we have a ```containsValue(Object value)``` method that retuns if one or more keys are mapped to this value.
 
 
 
