@@ -659,7 +659,18 @@ the ```get(Object key)``` method takes a key as a parameter and returns the valu
 ### using the ```getOrDefault() ```method
 the ```getOrDefault(Object key, V defaultValue)``` method is useful if are not sure whether a key i s present in the Map or not. if the key is present the this method returns the value corresponding to the key and if the key is not present then the default value is returned
 
+## Replacing a value in HashMap
+when we insert a key-value pair in HashMap and the key is already present then its value gets updated. but if we only want to update the value of a key that is present in the map, then we can use the ```replace()``` method. there are two overloaded versions of the replace() method and one replaceAll() method. all three methods were added in Java 8.
+### Using the ```replace(K key, V oldValue, V newValue)``` method
+The ```replace(K key, V oldValue, V newValue)``` method takes three parameters: the key, the oldValue, and a new value. it checks if the current value of the key is equal to the old value provided in the parameter. if yes then it replaces the value with ```newValue``` and returns true; otherwise, it returns false.
+### using the ```replace(K key, V value)```  
+this method takes only two parameters: a key and a value. it replaces the value of the key with the new value provided as a parameter and returns the old value. if the key is not present, then it returns null.
 
+### using the ```replaceAll(BiFunction<? super K, ? super V, ? extends V> function)``` method
+this method takes a BiFunction as input and replaces the values of all the keys with the result of the given function. Suppose we need to add ten to the stock price of each company. instead of updating the value for each stock one by one, we can use ths method. The lambda expression to do this task will look like this
+```java
+(key, value) -> value + 10;
+```
 
 
 
