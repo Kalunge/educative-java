@@ -349,9 +349,17 @@ we can use the ```getLast``` method to fetch the last element in the list. if Li
 ### Fetching element at a particular index
 we can fetch an element at a particular index by using the ```get(ind index)``` method. the index should be more than zero and less than the size of the LinkedList; otherwise, ```OndexOutOfBoundsException``` will be thrown. 
 
+## Removing element from a LinkedList
+let us discuss different methods to remove an element from a LinkedList
 
-
-
+### Removing the first element
+we can use the ```removeFirst()``` method to remove the first element in the list. if the LinkedList is empty, the  ```NoSuchElementException``` is thrown.
+### Removing the last element
+we can use the ```removeLast()``` method to remove the last element in the list. if the LinkedList is empty, the  ```NoSuchElementException``` is thrown.
+### Removing an element at a particular index
+we can remove an element at a particular index by using the ```remove(int index)``` method. the index should be more than zero and less than the size of the LinkedList; otherwsie, ```OndexOutOfBoundsException``` will be thrown. 
+### Removing a particular element
+we can use the ```remove(object o)``` method to remove a particular element from the LinkedList. if there is more than one occurrence of a particular element, the first occurrence is removed. if we want to remove the last occurrence of an element , the ```removeLastOccurrence()``` method can be used.
 
 
 
