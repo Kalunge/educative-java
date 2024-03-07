@@ -46,10 +46,10 @@ public class LinkedListDemo {
 
 
 
-        linkedList.remove(new Integer(2)); // removes the first occurrence of 2
+        linkedList.remove(Integer.valueOf(2)); // removes the first occurrence of 2
         System.out.println("LinkedList after removing  the first occurrence of 2: " +linkedList);
 
-        linkedList.removeLastOccurrence(new Integer(4)); // removes the last occurrence of 4
+        linkedList.removeLastOccurrence(4); // removes the last occurrence of 4
         System.out.println("LinkedList after removing  the last occurrence of 4: " +linkedList);
 
     }
