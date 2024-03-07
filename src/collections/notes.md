@@ -580,6 +580,53 @@ public class HashSetDemo {
 
 ```
 
+# HashMap
+## Creation and insertion
+Let us look at hot to create a HashMap and insert elements into it.
+
+**HashMap** is a class in the```java.utils``` package that implements the **Map** interface. it is used to store the key-value pair. let us suppose we need tp store the stock prices of some companies. in this case, we can use a HashMap. the company name will be the key and the stock price will be the value.
+
+some of the features of a HashMap are;
+* The keys should be unique
+* HashMap allows only one null key.
+* the values can be null or duplicate.
+* the keys are stored in random order.
+
+## creating a HashMap
+there are four different constructors available to create a HashMap in Java
+
+### Using the no-arg constructor
+the simplest way to create a HashMap is by using the no-arg constructor. this constructor creates a HashMap with an initial capacity of 16 and load factor of 0.75
+below is the code syntax to create a HashMap. it states that the key is a String type and the value is an Integer type.
+
+```java
+import java.util.HashMap;
+
+Map<String, Integer> map = new HashMap<>();
+```
+**Load factor is a number that defines when a Map should be resized. if the load factor is 0.75, then it means that the Map should be resized when it is 75 percent full.**
+
+## using the constructor that takes initial capacity.
+we can also provide the initial capacity while creating the HashMap. if we are already aware that our HashMap will contain more than 16 elements, then it is better to provide some initial capacity as it reduces the number of resizes. in this case, also, the default load factor is 0.75
+
+## Using the constructor that takes initial capacity and load factor
+we can also provide initial capacity with the load factor while creating the HashMap. if we dont want frequent resizing then we can set the load factor to a higher number
+## using a constructor that takes another map as a parameter
+we can also create a HashMap using another Map by passing it to the constructor. the newly created HashMap will have the same size as that of the passed Map, whereas the load factor will default to 0.75.
+## Inserting into a HashMap
+let us discuss the methods that we can use to insert a key-value pair in a **HashMap**
+
+### using the ```put()``` method
+we can use the ```put(K key, V value)``` method to insert a key-value pair in the HashMap. if the key is not present, then a new key-value pair will be added. if the key is already present, then the value will be updated. 
+
+### using the ```putIfAbsent()``` method
+the ```putIfAbsent(K key, V value)``` method inserts a key-value pair only if it is not already present in the Map. if the key is already present then its value will not be updated. This method was added in Java 8.
+
+### using the ```putAll()``` method
+the ```putAll(Map<? extends K, ? extends V< m)``` method copies all of the mappings from the specified map to this map. these mappings will replace any mappings this map had for any of the keys currently in the specified map
+
+the below code shows HashMap working properly
+
 
 
 
