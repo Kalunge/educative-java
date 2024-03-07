@@ -672,6 +672,12 @@ this method takes a BiFunction as input and replaces the values of all the keys 
 (key, value) -> value + 10;
 ```
 
+## Removing element from a HashMap
+an element can be easily removed from the **HashMap** using the ```remove(Object key)``` method. it takes a key as a parameter and removes that key from the map. This method returns the value of the key that was removed. if the key is not present, then it returns ```null```
+
+another overloaded version of this method ```remove(Object key, Object value)``` was aded in Java 8. this method removes a key only if is is currently mapped to the sepcified value. this method returns true if the key is removed; otherwise it returns false. 
+
+
 
 
 

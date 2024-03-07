@@ -41,5 +41,9 @@ public class HashMapDemo {
         stockPrice.replaceAll((key, value) -> value + 1000);
         System.out.println(stockPrice);
 
+        System.out.println(stockPrice.remove("Oracle")); //this will remove Oracle from the Map and return oracle value = 1076
+        System.out.println(stockPrice.remove("Google")); // will return null as Google is not in the Map
+        System.out.println(stockPrice.remove("BMW", 30)); // will return false as 30 is not the value of BMW
+
     }
 }
