@@ -648,7 +648,16 @@ public class HashMapDemo {
 }
 
 ```
+## Updation and Removal
+let us discuss the update and delete operations in HashMap
 
+## Fetching an element in a HashMap
+There are two ways to get an element from a HashMap
+### using the``` get()``` method
+the ```get(Object key)``` method takes a key as a parameter and returns the value corresponding to that key. if the key is not present, it returns ```null```
+
+### using the ```getOrDefault() ```method
+the ```getOrDefault(Object key, V defaultValue)``` method is useful if are not sure whether a key i s present in the Map or not. if the key is present the this method returns the value corresponding to the key and if the key is not present then the default value is returned
 
 
 

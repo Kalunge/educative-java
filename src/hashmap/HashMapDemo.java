@@ -15,5 +15,15 @@ public class HashMapDemo {
         stockPrice.putIfAbsent("Oracle", 100); // inserting share price of oracle again using puIfAbsent
         System.out.println(stockPrice);
 
+        stockPrice.put("Fiserv", 117);
+        stockPrice.put("BMW", 73);
+        stockPrice.put("Microsoft", 213);
+
+        System.out.println(stockPrice.get("Oracle"));
+        System.out.println(stockPrice.get("Google")); // should return null
+
+        // since google is not present , this will insert it with default value of q00.
+        System.out.println(stockPrice.getOrDefault("Google", 100));
+
     }
 }
