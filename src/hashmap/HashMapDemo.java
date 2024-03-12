@@ -181,6 +181,44 @@ public class HashMapDemo {
         }
         System.out.println(company);
 
+        List<Integer> stockPrices = new ArrayList<>();
+        int total = 0;
+
+        for (Map.Entry<String, Integer> entry : maxSet) {
+            stockPrices.add(entry.getValue());
+        }
+
+        for (Integer i : stockPrices) {
+            total += i;
+        }
+
+
+        System.out.println(total / stockPrices.size());
+
+        Collection<Integer> allValues = stockPrice.values();
+
+        int sum = 0;
+
+        for(Integer v : allValues) {
+            sum += v;
+        }
+
+        System.out.println(sum / values.size());
+
+        Iterator<Map.Entry<String, Integer>> newIterator = maxSet.iterator();
+
+        while (newIterator.hasNext()) {
+            Map.Entry<String, Integer> entry = newIterator.next();
+            if (entry.getValue() < 50) {
+                newIterator.remove();
+            }
+        }
+
+        System.out.println(stockPrice);
+
+
+
+
 
     }
 
