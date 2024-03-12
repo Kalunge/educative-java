@@ -873,7 +873,30 @@ public boolean equals(Object obj) {
 as we can see, it compares two reference points to the same object. since we have created two separate Employee objects, the equality check failed and both objects were saved. 
 now we will override the equals() method as well in the Employee class, and then we we=ill see that only one Employee object is stored
 
+## Why immutable objects make a good key
+it is not mandatory for a HashMap key to be immutable, but it is suggested that key objects are immutable. Immutability allows us to get the same hashCode every time for a key object.
+all the wrapper classes such as String, INteger, e.t.c, are immutable, so they are considered good key candidates
+Let us look at an example to understand what happens when a key object is not immutable. in the below example, we are using an Employee object as a key. After inserting the employee object into the HashMap, we will make a change in the Employee object. after that, we will tryto get the value for this key from the HashMap
+```java
+Employee employeeOne = new Employee(123, "Jane");
+Employee employeeTwo = new Employee(123, "Jane");
 
+Map<Employee, Integer> employeeMap = new HashMap<>();
+employeeMap.put(employeeOne, 56000);
+
+employeeOne.name = "Muthomi";
+System.out.println(employeeMap.get(employeeOne));
+```
+when we run the above program, null is returned. The reason is when we change the Employee object its hashCode also changes. Therefore, when we try to search for the Employee object, a different bucket is retruned. although the object was present in the HashMap, it is not returned
+if we are using custom object as the HashMap key, then either the class should be immutable, or the fields that are used to calculate the hashCode should be made final.
+
+## HashMap Iteration
+let us see how we can iterate elements of a HashMap
+
+Iterating a HashMap is a bt challenging compared to a List or a Set as it contains pairs of elements. In a map, each key-value pair is called entry. the ```entrySet()``` method returns the Set view of the mapped elements. we can iterate over this set using any of the below approaches
+
+## Iterating using a for loop
+we can easily iterate the EntrySet returned by the entrySet() method using an enhanced for loop. The Ebtry class contains two methods: ```getKey()``` and ```getValue()```, which can be used to get the key and value respectively.
 
 
 

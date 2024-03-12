@@ -1,5 +1,6 @@
 package hashmap;
 
+import java.security.KeyStore;
 import java.util.*;
 
 public class HashMapDemo {
@@ -111,8 +112,19 @@ public class HashMapDemo {
         employeeMap.put(employeeOne, 56000);
         employeeMap.put(employeeTwo, 45000);
 
+        employeeOne.name = "Muthomi";
+        System.out.println(employeeMap.get(employeeOne));
+
+
         for (Map.Entry<Employee, Integer> entry : employeeMap.entrySet()) {
             System.out.println("Employee id: " + entry.getKey().id + " employee name: " + entry.getKey().name);
+        }
+
+
+        Set<Map.Entry<String, Integer>> entrySet = stockPrice.entrySet(); // returns a set of entries
+
+        for(Map.Entry<String, Integer> entry : entrySet) {
+            System.out.println("Company name: " + entry.getKey() + " Stock price: " + entry.getValue());
         }
 
 
