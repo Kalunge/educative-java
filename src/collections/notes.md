@@ -751,6 +751,136 @@ merge(K key, V value,
       BiFunction remappingFunction);
 ```
 
+## HashMap Internal Implementation
+Let us look at how a **HashMap** works internally. 
+
+How **HashMap** works internally is the most asked interview question in Java interviews. and the reason is that it is difficult to understand the inner workings of HashMap. In this lesson, we will try to understand every aspect of HashMap.
+The basic principle used by a HashMap to store elements is **Hashing** Hashing is a way to assign a unique code for any variable or object after applying any formula to its properties. The unique code is called **HashCode**.
+some of the properties of HashCode is
+1. if two objects are equal then they should have the same hashCode. 
+2. if two objects have the same HashCode, then it is not necessary for them to be equal.
+
+## Creating a HashMap
+we already know that the HashMap stores key-value pairs. HashMap has a nested static class called Node as shown below
+
+```java
+import java.util.Map;
+
+static class Node(K, V) implements Map.Entry<K,V> {
+    final int hash;
+    final K key;
+    V value;
+    Node<K,V> next;
+    ...some more code;
+}
+```
+This class has a key and a value field. it also has a next field that is used to point to the next Node.
+HashMap also has a field called table as shown below. it is basically an array of Node objects that are not yet initialized
+```java
+transient Node<K, V>[] table;
+```
+when we create a HashMap using the no-arg constructor, then the only thing that happens is that the loadFactor is assigned ```DEFAULT_LOAD_FACTOR```, WHICH IS .75
+The table array that we have discussed above is not initialized at the time of creation of HashMap
+
+```java
+public HashMap() {
+    this.loadFactor = DEFAULT_LOAD_FACTOR; // all other field defaulted
+}
+```
+## Inserting into a HashMap
+when an element is inserted into the HashMap for the first time, the array table is initialized with size 16. so now there are 16 buckets from index 0 to 15.
+if the key we are inserting is null, then it is inserted at index 0 because the hashCode of null is 0. if the key is not null, then the hash of the key is calculated, and based on the hash value the bucket is decided.
+it there is no other element in that bucket, then a new Node is created and is inserted in that bucket.
+![Screenshot 2024-03-12 at 11.55.30.png](..%2F..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fjd%2F_tr5km9d1bn2rtnrw8k2rxsc0000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_4VseSH%2FScreenshot%202024-03-12%20at%2011.55.30.png)
+Now, let us say we insert another key that has the same hashcode as the previous key. in this case, this key will go to the same bucket and see that there is already an element there. This is referred to as **collision**
+in case of collision, it checks if the existing key in the bucket is equal to the key that we are trying to store. if yes then the value of the key is updated. if the key is different, then it is added at the end of the existing key into the bucket to fork=m a linkedlist.
+![Screenshot 2024-03-12 at 11.58.19.png](..%2F..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fjd%2F_tr5km9d1bn2rtnrw8k2rxsc0000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_An3KGH%2FScreenshot%202024-03-12%20at%2011.58.19.png)
+
+There is no improvement made in Java 8. if the size of the LinkedList in a particular bucket becomes more than **TREEIFY_THRESHOLD**, then the linkedlist is converted to a red-black tree. 
+**TREEIFY_THRESHOLD** is a constant with a default of 8. This value can't be changed as it is a final variable. This means that if the size of the linked list becomes more than 8 then it is converted into a tree. 
+![Screenshot 2024-03-12 at 12.01.01.png](..%2F..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fjd%2F_tr5km9d1bn2rtnrw8k2rxsc0000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_AQksJj%2FScreenshot%202024-03-12%20at%2012.01.01.png)
+
+## Fetching a value from HashMap
+when we need to get a value from **HashMap**, then the hashcode of the key is calculated. Based on the hashcode the index is decided, and we go to that index. Now it is possible that there are zero or more keys stored at that index. we match our key with all the keys at that index using the ```equals()``` method. if the match is found, then we reeturn the value of that key. if the key is not found, then null is returned.
+![Screenshot 2024-03-12 at 12.03.45.png](..%2F..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fjd%2F_tr5km9d1bn2rtnrw8k2rxsc0000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_eOyyWG%2FScreenshot%202024-03-12%20at%2012.03.45.png)
+
+## Resizing a HashMap
+we already know that a HashMap is resized when it is about to get full. when a HashMap will be resized depends upon the load factor. if the current capacity is 16, the load factor is .75, then the HashMap will resize when it has 12 elements(0.75 * 16)
+when a HashMap is resized, its capacity is always doubled. so if the current capacity is 16, then the new capacity will be 32. Now all the elements that are stored in the HashMap will be rearranged amongst these 32 buckets. This is a time-consuming operation as the bucket for each key is calculated and rearranged. 
+
+# HashMap: How to design a good key
+Let us see how we can design a good HashMap key. 
+the first and foremost requirement for a good key is that it should follow the ```hashCode()``` and ```equals()``` contract. the contract says:
+1. if two objects are equal , then they must have the same hash code
+2. if two objects have the same hash code, they may or may not be equal
+
+This means that the class that is being used as key must override both ```equals()``` and ```hashCode()```
+
+#### why overriding both ```hashCode()``` and ```equals()``` is important
+if a class does not override bth ```hashCode()``` and ```equals()``` method, then it will break the contract and the HashMap may not work. Let us look at an example. we have an Employee class that has two fields as shown below
+```java
+public class Employee {
+    int empId;
+    String empName;
+}
+```
+this class overrides the ```hashCode()``` method but does not override the``` equals()``` method. ideally, two objects are considered equal if their empID is equal.
+now we will create theo Employee objects with the same empId and empName.  we will also create a HashMap where the key will be the Employee object, and the value will be the salary. the HashMap shuld not allow both the employee objects to be inserted as they are equal.
+```java
+package hashmap;
+
+import java.util.Objects;
+
+public class Employee {
+    int id;
+    String name;
+
+    public Employee(int id, String name) {
+        super();
+        this.id = id;
+        this.name = name;
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + id;
+        result = prime * result + ((name == null) ? 0 : name.hashCode());
+        return result;
+    }
+}
+
+
+Employee employeeOne = new Employee(123, "Jane");
+Employee employeeTwo = new Employee(123, "Jane");
+
+Map<Employee, Integer> employeeMap = new HashMap<>();
+employeeMap.put(employeeOne, 56000);
+employeeMap.put(employeeTwo, 45000);
+
+for (Map.Entry<Employee, Integer> entry : employeeMap.entrySet()) {
+    System.out.println("Employee id: " + entry.getKey().id + " employee name: " + entry.getKey().name);
+}
+```
+
+on running the above programme, we can see that both the Employee objects  got inserted into the HashMap. The reason is that since we have not overridden the equals() method , the equals() method of the Object class is called because Object is the super class of all the classes. below is the implementation of the equals() method in the Obect class.
+```java
+public boolean equals(Object obj) {
+    return (this == obj);
+}
+```
+as we can see, it compares two reference points to the same object. since we have created two separate Employee objects, the equality check failed and both objects were saved. 
+now we will override the equals() method as well in the Employee class, and then we we=ill see that only one Employee object is stored
+
+
+
+
+
+
+
+
+
 
 
 

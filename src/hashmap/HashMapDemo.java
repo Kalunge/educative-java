@@ -100,10 +100,20 @@ public class HashMapDemo {
         mapTwo.put("Nidhi", 1200);
         mapTwo.put("Saurav", 25000);
 
-        mapOne.forEach((key, value )-> mapTwo.merge(key, value, (v1, v2) -> v1 + v2));
+        mapOne.forEach((key, value) -> mapTwo.merge(key, value, (v1, v2) -> v1 + v2));
         System.out.println(mapTwo);
 
 
+        Employee employeeOne = new Employee(123, "Jane");
+        Employee employeeTwo = new Employee(123, "Jane");
+
+        Map<Employee, Integer> employeeMap = new HashMap<>();
+        employeeMap.put(employeeOne, 56000);
+        employeeMap.put(employeeTwo, 45000);
+
+        for (Map.Entry<Employee, Integer> entry : employeeMap.entrySet()) {
+            System.out.println("Employee id: " + entry.getKey().id + " employee name: " + entry.getKey().name);
+        }
 
 
     }
