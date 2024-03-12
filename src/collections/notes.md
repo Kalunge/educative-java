@@ -896,8 +896,10 @@ let us see how we can iterate elements of a HashMap
 Iterating a HashMap is a bt challenging compared to a List or a Set as it contains pairs of elements. In a map, each key-value pair is called entry. the ```entrySet()``` method returns the Set view of the mapped elements. we can iterate over this set using any of the below approaches
 
 ## Iterating using a for loop
-we can easily iterate the EntrySet returned by the entrySet() method using an enhanced for loop. The Ebtry class contains two methods: ```getKey()``` and ```getValue()```, which can be used to get the key and value respectively.
+we can easily iterate the EntrySet returned by the entrySet() method using an enhanced for loop. The Entry class contains two methods: ```getKey()``` and ```getValue()```, which can be used to get the key and value respectively.
 
+## Using an Iterator
+Instead of using for loop , we can get the iterator on the EntrySet and then use it to iterate the HashMap. if we remove an element from the EntrySet, then it is also remove from the original map.
 
 
 

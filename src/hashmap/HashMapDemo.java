@@ -122,10 +122,29 @@ public class HashMapDemo {
 
 
         Set<Map.Entry<String, Integer>> entrySet = stockPrice.entrySet(); // returns a set of entries
+        Iterator<Map.Entry<String, Integer>> itr = entrySet.iterator(); // Getting the iterator
 
-        for(Map.Entry<String, Integer> entry : entrySet) {
+
+        for (Map.Entry<String, Integer> entry : entrySet) {
             System.out.println("Company name: " + entry.getKey() + " Stock price: " + entry.getValue());
         }
+
+        System.out.println();
+
+        System.out.println("Iterating using an iterator");
+
+        while (itr.hasNext()) {
+            Map.Entry<String, Integer> entry = itr.next();
+            System.out.println("Company name: " + entry.getKey() + ", Stock price: " + entry.getValue());
+
+            if (entry.getKey().equals("Oracle")) {
+                itr.remove();
+            }
+        }
+        System.out.println("Printing out the resulting Map");
+        System.out.println();
+
+        System.out.println(stockPrice);
 
 
     }
