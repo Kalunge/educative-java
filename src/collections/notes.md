@@ -901,6 +901,9 @@ we can easily iterate the EntrySet returned by the entrySet() method using an en
 ## Using an Iterator
 Instead of using for loop , we can get the iterator on the EntrySet and then use it to iterate the HashMap. if we remove an element from the EntrySet, then it is also remove from the original map.
 
+## using ```forEach()``` method
+
+the ```forEach(BiConsumer<? super K, ? super V> action)``` method is a default method that was introduced in Java 8. it takes a ```BiConsumer``` as a parameter. The below example shows how we can use the ```forEach()``` method to print the key-value pairs
 
 
 

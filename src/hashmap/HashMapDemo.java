@@ -146,6 +146,11 @@ public class HashMapDemo {
 
         System.out.println(stockPrice);
 
+        System.out.println("Iterate using forEach");
+        System.out.println();
+
+        stockPrice.forEach((key, value) -> System.out.println("Company name: " + key + ", Stock price: " + value));
+
 
     }
 }
