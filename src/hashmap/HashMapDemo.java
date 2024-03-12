@@ -151,6 +151,38 @@ public class HashMapDemo {
 
         stockPrice.forEach((key, value) -> System.out.println("Company name: " + key + ", Stock price: " + value));
 
+        stockPrice.put("Oracle", 56);
+        stockPrice.put("Fiserv", 117);
+        stockPrice.put("BMW", 73);
+        stockPrice.put("Microsoft", 213);
+        stockPrice.put("Google", 421);
+        stockPrice.put("Ford", 456);
+        stockPrice.put("Novartis", 43);
+        stockPrice.put("TCS", 23);
+
+        System.out.println(stockPrice);
+
+        System.out.println("Find the highest stock price");
+
+        Set<Map.Entry<String, Integer>> maxSet = stockPrice.entrySet();
+
+        Iterator<Map.Entry<String, Integer>> iterator = maxSet.iterator();
+        int max = 0;
+        String company = "";
+
+        while (iterator.hasNext()) {
+            Map.Entry<String, Integer> entry = iterator.next();
+
+
+            if (entry.getValue() > max) {
+                max = entry.getValue();
+                company = entry.getKey();
+            }
+        }
+        System.out.println(company);
+
 
     }
+
+
 }
