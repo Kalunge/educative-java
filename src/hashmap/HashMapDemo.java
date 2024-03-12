@@ -87,6 +87,23 @@ public class HashMapDemo {
         map.computeIfPresent("Kenya", (k, v) -> v == null ? 10 : v + 1);
         System.out.println(map);
 
+        Map<String, Integer> mapOne = new HashMap<>();
+
+        mapOne.put("Jay", 5000);
+        mapOne.put("Rahul", 3000);
+        mapOne.put("Nidhi", 4500);
+        mapOne.put("Amol", 60000);
+
+        Map<String, Integer> mapTwo = new HashMap<>();
+        mapTwo.put("Jay", 7000);
+        mapTwo.put("Rahul", 4500);
+        mapTwo.put("Nidhi", 1200);
+        mapTwo.put("Saurav", 25000);
+
+        mapOne.forEach((key, value )-> mapTwo.merge(key, value, (v1, v2) -> v1 + v2));
+        System.out.println(mapTwo);
+
+
 
 
     }

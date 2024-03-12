@@ -734,9 +734,22 @@ public Object computeIfPresent(Object key,
 ```
 
 let's say we have a HashMap in which the key is a String and the value is some Integer. then we can use ```computeIfPresent()``` method to update the value in the Map. we will pass a lambda function that will calculate a value if the key is already present in the Map.
+## The ```merge() ```method
+the merge function can be used to merge two Maps. this method takes three arguments:
+1. **key** - The Key that needs to be merged
+2. **value** - The value that needs to be inserted in case the key is not present.
+3. **remappingFunction** - This is a BiFunction that is used to update the value if the key is present. 
 
+we will begin to understand the working of this method using an example. let us say we have two Mpas in which the key is tha name of a person and the value is the amount of money that person has borrowed from us. it is possible that a person is present in both the Mpas. So, we need to merge these maps to find the total amount that each person has borrowed from us. 
+The syntax of this method is
 
+```java
+import java.security.Key;
+import java.util.function.BiFunction;
 
+merge(K key, V value,
+      BiFunction remappingFunction);
+```
 
 
 
