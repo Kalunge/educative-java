@@ -692,12 +692,48 @@ if we need to fetch all the values stored in a HashMap, we can use the ```values
 ## Checking if the HashMap is empty
 we can check if the HashMap is empty using the ```isEmpty()``` method. This method returns true if the Map does not have any elements and returns false if the Map has soe elements.
 
+## Java 8 Improvements
+let us discuss the improvements made in the HashMap class in Java 8.
+in this lesson we will look at some of the HashMap Operations that were added in Java 8
 
+## The ```compute()``` method
+The ```compute(key, BiFunction)``` method allows us to update a value in HashMap. This method tries to compute a mapping for the specified key and its current mapped value(or null if no current mapping is found). this method is used to atomically update a value for a given key in HashMap
+1. if the remapping function passed in compute returns null, the mapping is removed from the Map(or remains absent if initially absent)
+2. if the remapping function throws an exception, the exception is rethrown, and the current mapping is left unchanged.
+the syntax of this method is
 
+```java
+import java.util.function.BiFunction;
 
+compute(K key, BiFunction<? super K, ?super V, ? extends V> remappingFunction)
+```
+let's say we have a HashMap in which the key is a String, and the value is an Integer. we need to increment the value for a given key by one, and if the key is not present, we need to insert the key with the default value of 10. we can create a lambda expression and pass it to the compute() method.
 
+## the ```computeIfAbsent() ```method
+the ```computeIfAbsent(Key, function)``` method of the HashMap class is used to compute the value for a given key using the given mapping function and enter that computed in HashMap; otherwise, it is null. please note that the computeIfAbsent() will work only if the key is absent ot of the key is present with a null value. 
+the syntax of this method is
 
+```java
+import java.util.function.Function;
 
+public V
+computeIfAbsent(K key,
+                Function<? super  K, ? extends V> remappingFunction);
+```
+let us say we have a HashMap in which the key is a String and the value is the length of the String. we can use the computeIfAbsent() method to insert new pairs in the Map. we will pass a lambda function that returns the length of the key. 
+
+## The ```ComputeIfPresent() ```method
+the ```ComputeIfPresent(Key, BiFunction)``` method of the HashMap class allows ou to compute the value of mapping for a specified key if the key is already associated with a value or is mapped to null. 
+1. if the mapping function of this method returns null, the mapping is removed
+2. if the mapping function throws an exception, the exception is rethrown, and the mapping is left unchanged.
+
+the syntax of this method is
+```java
+public Object computeIfPresent(Object key,
+                               BiFunction remappingFunction);
+```
+
+let's say we have a HashMap in which the key is a String and the value is some Integer. then we can use ```computeIfPresent()``` method to update the value in the Map. we will pass a lambda function that will calculate a value if the key is already present in the Map.
 
 
 

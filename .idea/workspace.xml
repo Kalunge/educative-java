@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97a6042a-5015-43f1-9889-c8c78113e8fd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/collections/notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/collections/notes.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hashmap/HashMapDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hashmap/HashMapDemo.java" afterDir="false" />
     </list>
@@ -23,9 +24,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -40,38 +41,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ArrayListDemo.executor": "Run",
-    "Application.ArrayListPractice.executor": "Run",
-    "Application.Employee$ArrayListDemo.executor": "Run",
-    "Application.HashMapDemo.executor": "Run",
-    "Application.HashSetChallenge.executor": "Run",
-    "Application.HashSetDemo.executor": "Run",
-    "Application.Iteration.executor": "Run",
-    "Application.IterationDemo.executor": "Run",
-    "Application.LinkedListDemo.executor": "Run",
-    "Application.ListIteratorDemo.executor": "Run",
-    "Application.Loops.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.MainChallenge.executor": "Run",
-    "Application.Operations.executor": "Run",
-    "Application.OtherOperations.executor": "Run",
-    "Application.RawTypeArrayList.executor": "Run",
-    "Application.SortingDemo.executor": "Run",
-    "Application.Vehicle$VehicleDemo.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ArrayListDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ArrayListPractice.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Employee$ArrayListDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HashMapDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HashSetChallenge.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HashSetDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Iteration.executor&quot;: &quot;Run&quot;,
+    &quot;Application.IterationDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LinkedListDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ListIteratorDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Loops.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainChallenge.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Operations.executor&quot;: &quot;Run&quot;,
+    &quot;Application.OtherOperations.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RawTypeArrayList.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SortingDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Vehicle$VehicleDemo.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.HashMapDemo">
     <configuration name="HashMapDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hashmap.HashMapDemo" />
@@ -160,7 +161,8 @@
       <workItem from="1709116910961" duration="2129000" />
       <workItem from="1709303395788" duration="187000" />
       <workItem from="1709616432738" duration="18004000" />
-      <workItem from="1709788599648" duration="14023000" />
+      <workItem from="1709788599648" duration="15702000" />
+      <workItem from="1710223671762" duration="1591000" />
     </task>
     <servers />
   </component>

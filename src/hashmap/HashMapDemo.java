@@ -60,9 +60,34 @@ public class HashMapDemo {
         }
 
         Map<String, Integer> map = new HashMap<>();
-        System.out.println(map.isEmpty());
+        map.put("India", 5);
+        map.put("USA", 3);
+        map.put("China", 5);
+        map.put("Russia", 6);
+
+        // increase value of india by 1 if present
+        map.compute("India", (key, value) -> value == null ? 10 : value + 1);
+
+        // insert Vietnam with a value of 10
+        map.compute("Vietnam", (key, value) -> value == null ? 10 : value + 1);
+
+        System.out.println(map);
 
         System.out.println(stockPrice.isEmpty());
+
+        map.computeIfAbsent("Malaysia", k -> k.length());
+        System.out.println(map);
+
+
+        // increment the value of India by one since it is present
+        map.computeIfPresent("India", (k, v) -> v == null ? 10 : v + 1);
+        System.out.println(map);
+
+        // will not Insert Kenya into the map
+        map.computeIfPresent("Kenya", (k, v) -> v == null ? 10 : v + 1);
+        System.out.println(map);
+
+
 
     }
 }
