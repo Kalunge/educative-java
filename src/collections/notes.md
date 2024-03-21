@@ -1308,6 +1308,38 @@ the ```max(Collection c)``` method can be used to find the maximum element in a 
 
 ## Finding the frequency of an element in a collection
 there is a ```frequency(Collection c, Object o)``` method that can be used to find the frequency of a given element in the Collection. This method iterates over the entire collection so the time complexity is proportional to the size of the collection.
+```java
+package arrays;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class CollectionsDemo {
+    public static void main(String[] args) {
+        List<Integer> list = new ArrayList<>();
+        list.add(34);
+        list.add(12);
+        list.add(12);
+        list.add(9);
+        list.add(76);
+        list.add(29);
+        list.add(75);
+
+        System.out.println("The minimum element in the lists is: " + Collections.min(list));
+        System.out.println("The maximum element in the lists is: " + Collections.max(list));
+        System.out.println("The number of time 12 occurs in the list is: " + Collections.frequency(list, 12));
+    }
+}
+
+```
+## Searching Filling and copying Collection
+let us discuss some operations available in the Collections class.
+
+## Searching an element in a collection
+the ```binarySearch(List list, T key)``` method searches the specified list for the specified object using the binary search algorithm. The elements added in the list must implement the Comparable interface, and the list must be sorted into ascending order before mking this call. if it is not sorted, the results are undefined. if the list contains multiple elements equal to the specified object , there is no guarantee which one will be found.
+if the elements added to our list do not implement the Comparable interface, then we can use another overloaded version of ```binarySearch(List list, T key, Comparator c)``` which takes a Comparator for the input as well. the list must be sorted into ascending order according to the specified comparator.
+if the element is not present in the list, then this method returns a position where the element can be inserted.
 
 
 

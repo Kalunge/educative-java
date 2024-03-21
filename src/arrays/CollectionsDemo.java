@@ -18,5 +18,6 @@ public class CollectionsDemo {
         System.out.println("The minimum element in the lists is: " + Collections.min(list));
         System.out.println("The maximum element in the lists is: " + Collections.max(list));
         System.out.println("The number of time 12 occurs in the list is: " + Collections.frequency(list, 12));
+        System.out.println("The element 222 can be found at: " + Collections.binarySearch(list, 222));
     }
 }
