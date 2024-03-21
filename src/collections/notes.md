@@ -1134,6 +1134,40 @@ public class HashMapDemo {
 
 ```
 
+# ARRAY CLASS
+## Searching an Array
+let us discuss how we can use the binarySearch() method to search an element in an array
+
+**Arrays** is a class in the ```java.utils``` package that contains various methods for manipulating arrays(such as sorting and searching). This class also contains a static factory that allows arrays to be seen as a list. The methods in this class throw a ```NullPointerException``` if the specified array reference is null.
+## Searching a element in an array
+the **Arrays** class provides the ```binarySearch()``` method to search for a particular element in an array. There are a lot of overloaded ```binarySearch()``` methods to handle all the primitive types. some of the important points to note about the ```binarySearch() ```method are:
+1. The array that is passed to the method should be sorted. if the array is not sorted, then the result is undefined.
+2. this method returns the index where the element is present in the array. if the element is not present in the array, then the index of the first element greater than the key is returned. 
+3. if the array contains multiple elements with the specified value, there is not guarantee which one will be found.
+4. classCastException is thrown if the search key is not comparable to the elements of the array.
+as the name suggests, the binarySearch method uses the binary search algorithm to search for an element in the array. it is far better than a linear search. the complexity of the linear search algorithm is O(n) whereas that of the binary search algorithm is O(log n).
+the example below shows how we can use the binary search method to search an element in an integer array
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
