@@ -19,5 +19,14 @@ public class CollectionsDemo {
         System.out.println("The maximum element in the lists is: " + Collections.max(list));
         System.out.println("The number of time 12 occurs in the list is: " + Collections.frequency(list, 12));
         System.out.println("The element 222 can be found at: " + Collections.binarySearch(list, 222));
+
+        List<Integer> list2 = new ArrayList<>();
+        list2.add(90);
+        list2.add(12);
+        list2.add(98);
+        list2.add(43);
+
+        Collections.copy(list, list2);
+        System.out.println(list);
     }
 }

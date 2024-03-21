@@ -1341,7 +1341,25 @@ the ```binarySearch(List list, T key)``` method searches the specified list for 
 if the elements added to our list do not implement the Comparable interface, then we can use another overloaded version of ```binarySearch(List list, T key, Comparator c)``` which takes a Comparator for the input as well. the list must be sorted into ascending order according to the specified comparator.
 if the element is not present in the list, then this method returns a position where the element can be inserted.
 
+## Copying a list into another list
+the ```copy(list dest, list src)``` method is used to copy all the  elements from a source list to a destination list. if the size of the destination list is smaller than the source list, then ```indexOutOfBoundsException``` is thrown. After the operation, the index of each copied element in the destination list will be identical to its index in the source list.
+let's us consider an example:
 
+```java
+import java.util.Collections;
+
+List dest = 10, 20,30,40,50,60;
+List src = 1,2,3
+Collections.copy(dest, src)
+```
+
+after doing the copy operation above, the dest list will become
+
+```java
+{1,2,3,40,50,60}
+```
+
+so the ```copy()``` method does not merge the elements of the two lists. it replaces the elements in the destination list from the elements in the source list
 
 
 
