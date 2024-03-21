@@ -1147,7 +1147,7 @@ the **Arrays** class provides the ```binarySearch()``` method to search for a pa
 4. classCastException is thrown if the search key is not comparable to the elements of the array.
 as the name suggests, the binarySearch method uses the binary search algorithm to search for an element in the array. it is far better than a linear search. the complexity of the linear search algorithm is O(n) whereas that of the binary search algorithm is O(log n).
 the example below shows how we can use the binary search method to search an element in an integer array
-
+it is possible that we may not need to search the entire array. in that case, we can provide the start and end index of the elements in the array that needs to be searched.
 
 
 
