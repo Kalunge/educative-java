@@ -1261,11 +1261,46 @@ we can convert an array into a list using the ```asList()``` method. if any chan
 
 ## checking if two arrays are equal
 we can use the ```equals()``` method of the Arrays class to check if the two arrays are equal or not. Two arrays are considered equal if both have the same number of elements and all corresponding pairs of elements in the two arrays are equal. 
+```java
+package arrays;
 
+import java.util.Arrays;
+import java.util.List;
 
+public class ArraysOperationsDemo {
+    public static void main(String[] args) {
+        Integer[] numbers = {1,2,3,4,5,6,7,8};
+        List<Integer> list = Arrays.asList(numbers);
 
+        System.out.println(list);
 
+        int[] numbersOne = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int[] numbersTwo = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
+        int[] numbersThree = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int[] numbersFour = {1, 1, 3, 4, 5, 6, 7, 8, 9, 10};
+
+        boolean isEqual = Arrays.equals(numbersOne, numbersTwo);
+
+        System.out.println("Checking if two arrays are equal : " +isEqual);
+
+        boolean isEquals = Arrays.equals(numbersThree, numbersFour);
+
+        System.out.println("Checking if two arrays are equal : " +isEquals);
+    }
+}
+
+```
+## Filling an array with default value
+have you ever encountered a scenario where you need to initialize an array and then fill it with some default values.
+if yes, then you might have iterated the array and filled each element with the default value. This method takes an array and a default value as input. it then assigns the default value to each element of the array
+
+# Collections Class
+## Finding the min and max element
+let us look at how we can find the min and max elements in a collection
+
+## Finding the minimum element in a collection
+the ```min(Collection c)``` method can be used to find the minimum element in a **Collection**. The elements present in the Collection must implement the Comparable interface. if the elements do not implement the Comparable interface, we can use another overloaded method ```min(Collection c, Comparator comp)```. this method takes a Comparator as a n argument that is used to compare the elements. This method iterates over the entire collection; hence it requires time proportional to the size of the collection.
 
 
 

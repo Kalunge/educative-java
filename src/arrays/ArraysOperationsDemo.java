@@ -23,5 +23,17 @@ public class ArraysOperationsDemo {
         boolean isEquals = Arrays.equals(numbersThree, numbersFour);
 
         System.out.println("Checking if two arrays are equal : " +isEquals);
+
+        int[] fillNumbers = {1, 1, 3, 4, 5, 6, 7, 8, 9, 10};
+        Arrays.fill(fillNumbers, 20);
+
+        for (int i : fillNumbers) {
+            System.out.print(i + ", ");
+        }
+
+        System.out.println();
+
+        int[] numbersToSearch = {1, 2, 3, 5, 6, 7, 8, 9, 10, 11};
+        System.out.println(Arrays.binarySearch(numbersToSearch, 4));
     }
 }
