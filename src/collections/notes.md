@@ -1176,8 +1176,25 @@ Employee[] employees = { new Employee(123, "Jay"), new Employee(124, "Roy"), new
         int employeeIndex = Arrays.binarySearch(employees, new Employee(124, "Roy")); // throws ClassCast exception as Employee doesnt implement Comparable interface
         System.out.println("The index of employee  in the array is: " + employeeIndex); 
 ```
-we have to options to fix the above issue. Eithe our class should implement the Comparable interface or we should pass a Comparator implementation while calling the ```binarySearch() ```method.
+we have to options to fix the above issue. Either our class should implement the Comparable interface or we should pass a Comparator implementation while calling the ```binarySearch() ```method.
 in he example below we are passing Comparator implementation while calling the ```binarySearch()``` method
+
+## Sorting an array
+let us see how we can sot an array using the sort() method of the Arrays class.
+
+The Arrays class has a sort() method that is used to sort the arrays of objects and primitives. If we are sorting a primitive array, then quicksort is used. And if we are sorting an object array, then merge sort is used.
+
+Although quicksort is faster in both cases, it is not a stable algorithm. Merge sort is a stable algorithm, so it is used in the case of sorting an object array. In the case of the primitive array, we don’t care about stability, so quicksort is used.
+**Stable sorting algorithms are algorithms that maintain the relative order of equal elements. For example, we have an array [1,4,6,8,6], which we need to sort. Now after sorting this array, the result is [1,4,6,6,8]. Although there are two sixes in the array, we don’t care which six came first in the sorted array. But in the case of an object array, the relative order of elements also matters. If two objects are the same in an object array, then their relative order should be the same in the sorted array.**
+
+The sort method has two variants:
+1. ```sort(array)``` - sorts the full array into ascending order.
+2. ```sort(array, fromIndex, toIndex)``` - sorts only the elements from fromIndex to toIndex.
+
+## Sorting an array in parallel
+in Java 8, a new method ```parallelSort()``` was introduced to sort the arrays parallelly. Unlike, ```sort()```, which sorts data sequentially using a single thread, parallelSort() uses a parallel sort-merge sorting algorithm. it breaks the array into sub-arrays that are themselves sorted and then merged.
+This method uses the ForkJoin pool for executing parallel tasks. The array is sorted parallelly only when certain conditions are meet. if the array size is less than or equal to 8192 or the processor has onlly one core, then the sequential dual-pivot quicksort algorithm is used. otherwise, it uses a parallel sort.
+
 
 
 
