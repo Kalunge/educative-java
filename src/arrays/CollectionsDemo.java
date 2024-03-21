@@ -9,6 +9,7 @@ public class CollectionsDemo {
         List<Integer> list = new ArrayList<>();
         list.add(34);
         list.add(12);
+        list.add(12);
         list.add(9);
         list.add(76);
         list.add(29);
@@ -16,5 +17,6 @@ public class CollectionsDemo {
 
         System.out.println("The minimum element in the lists is: " + Collections.min(list));
         System.out.println("The maximum element in the lists is: " + Collections.max(list));
+        System.out.println("The number of time 12 occurs in the list is: " + Collections.frequency(list, 12));
     }
 }

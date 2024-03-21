@@ -1306,7 +1306,8 @@ the ```min(Collection c)``` method can be used to find the minimum element in a 
 the ```max(Collection c)``` method can be used to find the maximum element in a colletion. The elements present in the collection must implement the comparable interface. if the elements do not implement the Comparable interface, we can use another overloaded method, ```max(Collection c, Comparator comp)```. this method takes a Comparator as a n argument that is used to compare the elements. This method iterates over the entire Collection; hence it requires time proportional to the size of the Collection
 
 
-
+## Finding the frequency of an element in a collection
+there is a ```frequency(Collection c, Object o)``` method that can be used to find the frequency of a given element in the Collection. This method iterates over the entire collection so the time complexity is proportional to the size of the collection.
 
 
 
