@@ -1195,6 +1195,11 @@ The sort method has two variants:
 in Java 8, a new method ```parallelSort()``` was introduced to sort the arrays parallelly. Unlike, ```sort()```, which sorts data sequentially using a single thread, parallelSort() uses a parallel sort-merge sorting algorithm. it breaks the array into sub-arrays that are themselves sorted and then merged.
 This method uses the ForkJoin pool for executing parallel tasks. The array is sorted parallelly only when certain conditions are meet. if the array size is less than or equal to 8192 or the processor has onlly one core, then the sequential dual-pivot quicksort algorithm is used. otherwise, it uses a parallel sort.
 
+## Copying an array
+let us discuss how we can create a copy of an array using the copyOf() method
+
+if we need to create copies of our array then we can use the ```copyOf()``` method from the **Arrays** class. we need to provide the array that needs to be copied and the new array's size as a parameter.
+the example below show how to create a copy of an array where the copied array size is the same as the original array. if the new array's size is greater than the original aray then the remaining positions filled with zeros
 
 
 
