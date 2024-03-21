@@ -1253,6 +1253,11 @@ public class ArraysCopyDemo {
 ```
 as we can see from the above program's output, the name did not change in the copied array. This means that the copyOf() method creates a deep copy of objects instead of just changing the references. 
 
+# Arrays Operations
+let us discuss some operations that can be performed using the Arrays class
+
+## Converting an array into a List
+we can convert an array into a list using the ```asList()``` method. if any changes are made to the resulting list, then changes are propagated to the original array. the asList method returns a fixed-size list, so it is not possible to add or remove elements from this list
 
 
 

@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97a6042a-5015-43f1-9889-c8c78113e8fd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/arrays/ArraysCopyDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/arrays/ArraysCopyDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/arrays/ArraysOperationsDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/collections/notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/collections/notes.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +46,7 @@
     "Application.ArrayListDemo.executor": "Run",
     "Application.ArrayListPractice.executor": "Run",
     "Application.ArraysCopyDemo.executor": "Run",
+    "Application.ArraysOperationsDemo.executor": "Run",
     "Application.Employee$ArrayListDemo.executor": "Run",
     "Application.HashMapDemo.executor": "Run",
     "Application.HashSetChallenge.executor": "Run",
@@ -74,7 +75,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.ArraysCopyDemo">
+  <component name="RunManager" selected="Application.ArraysOperationsDemo">
     <configuration name="ArrayDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="arrays.ArrayDemo" />
       <module name="educative-java" />
@@ -90,6 +91,19 @@
     </configuration>
     <configuration name="ArraysCopyDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="arrays.ArraysCopyDemo" />
+      <module name="educative-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="arrays.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArraysOperationsDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="arrays.ArraysOperationsDemo" />
       <module name="educative-java" />
       <extension name="coverage">
         <pattern>
@@ -127,26 +141,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HashSetDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hashset.HashSetDemo" />
-      <module name="educative-java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hashset.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ArraysOperationsDemo" />
         <item itemvalue="Application.ArraysCopyDemo" />
         <item itemvalue="Application.ArrayDemo" />
         <item itemvalue="Application.HashMapDemo" />
         <item itemvalue="Application.HashSetChallenge" />
-        <item itemvalue="Application.HashSetDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -166,7 +167,7 @@
       <workItem from="1710223671762" duration="12027000" />
       <workItem from="1711002284971" duration="1590000" />
       <workItem from="1711004445966" duration="2530000" />
-      <workItem from="1711009015454" duration="827000" />
+      <workItem from="1711009015454" duration="1304000" />
     </task>
     <servers />
   </component>
