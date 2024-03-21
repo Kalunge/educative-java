@@ -1200,9 +1200,14 @@ let us discuss how we can create a copy of an array using the copyOf() method
 
 if we need to create copies of our array then we can use the ```copyOf()``` method from the **Arrays** class. we need to provide the array that needs to be copied and the new array's size as a parameter.
 the example below show how to create a copy of an array where the copied array size is the same as the original array. if the new array's size is greater than the original aray then the remaining positions filled with zeros
-
+it is possible that we may only want to copy a part of our original array. in that case, we can use the ```copyOfRange()``` method. This method takes three arguments: the from index which is inclusive, and a to index which is exclusive.
+Have you ever wondered what would happen if we create a copy of an array that contains objects of a custom class.
+if we change the objects in the original array, will it be changed in the copied array?
+let us try to answer these questions using an example. we have created an array of two Employee objects. then we created a copy of this array. we will see what happens when one of the Employee objects is changed in the original array. 
 ```java
 package arrays;
+
+import hashmap.Employee;
 
 import java.util.Arrays;
 
@@ -1224,13 +1229,29 @@ public class ArraysCopyDemo {
         for(int num : newArrayBiggerSize) {
             System.out.print(num +", ");
         }
+
+        int[] rangeCopiedArray = Arrays.copyOfRange(numbers, 0, 5);
+
+        System.out.println("The copied array is");
+
+        for(int num : rangeCopiedArray) {
+            System.out.print(num +", ");
+        }
+
+        Employee[] employees = { new Employee(123, "Jay"), new Employee(124, "Ryan") };
+        Employee[] copiedArray = Arrays.copyOf(employees, 2);
+
+        employees[0] = new Employee(123, "Changed name");
+        System.out.println();
+        System.out.println(employees[0].getName());
+
+        System.out.println(copiedArray[0].getName());
+
     }
 }
 
 ```
-it is possible that we may only want to copy a part of our original array. in that case, we can use the ```copyOfRange()``` method. This method takes three arguments: the from index which is inclusive, and a to index which is exclusive.
-
-
+as we can see from the above program's output, the name did not change in the copied array. This means that the copyOf() method creates a deep copy of objects instead of just changing the references. 
 
 
 

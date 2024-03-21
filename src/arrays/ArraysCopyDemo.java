@@ -1,5 +1,7 @@
 package arrays;
 
+import hashmap.Employee;
+
 import java.util.Arrays;
 
 public class ArraysCopyDemo {
@@ -28,6 +30,15 @@ public class ArraysCopyDemo {
         for(int num : rangeCopiedArray) {
             System.out.print(num +", ");
         }
+
+        Employee[] employees = { new Employee(123, "Jay"), new Employee(124, "Ryan") };
+        Employee[] copiedArray = Arrays.copyOf(employees, 2);
+
+        employees[0] = new Employee(123, "Changed name");
+        System.out.println();
+        System.out.println(employees[0].getName());
+
+        System.out.println(copiedArray[0].getName());
 
     }
 }
