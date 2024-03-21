@@ -1148,10 +1148,36 @@ the **Arrays** class provides the ```binarySearch()``` method to search for a pa
 as the name suggests, the binarySearch method uses the binary search algorithm to search for an element in the array. it is far better than a linear search. the complexity of the linear search algorithm is O(n) whereas that of the binary search algorithm is O(log n).
 the example below shows how we can use the binary search method to search an element in an integer array
 it is possible that we may not need to search the entire array. in that case, we can provide the start and end index of the elements in the array that needs to be searched.
+```java
+public class ArrayDemo {
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int index = Arrays.binarySearch(numbers, 4);
+        System.out.println("The index of element 4 in the array is: " + index);
 
+        int anotherIndex = Arrays.binarySearch(numbers, 5,9,4);
 
+        System.out.println("The index of element 4 in the array is: " + anotherIndex);
 
+        anotherIndex = Arrays.binarySearch(numbers, 1, 5, 4);
 
+        System.out.println("The index of element 4 in the array is: " + anotherIndex);
+    }
+}
+```
+## Searching a custom class object in an array
+let us say we have created an Employee class and we have an array of **Employee** objects. we want to check if a particular Employee object is present in the array or not. 
+we will pass the employee array and the object that we need to search to the ```binaryearch()``` method as shown in the example below. 
+the example will not compile because our Employee class does not implement the Comparable interface. For the search to be successful it is necessary that the objects we have stored in the array should be comparable
+```java
+Employee[] employees = { new Employee(123, "Jay"), new Employee(124, "Roy"), new Employee(125, "Nikki"),
+                new Employee(126, "Tom") };
+
+        int employeeIndex = Arrays.binarySearch(employees, new Employee(124, "Roy")); // throws ClassCast exception as Employee doesnt implement Comparable interface
+        System.out.println("The index of employee  in the array is: " + employeeIndex); 
+```
+we have to options to fix the above issue. Eithe our class should implement the Comparable interface or we should pass a Comparator implementation while calling the ```binarySearch() ```method.
+in he example below we are passing Comparator implementation while calling the ```binarySearch()``` method
 
 
 
