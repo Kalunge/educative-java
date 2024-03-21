@@ -1360,7 +1360,8 @@ after doing the copy operation above, the dest list will become
 ```
 
 so the ```copy()``` method does not merge the elements of the two lists. it replaces the elements in the destination list from the elements in the source list
-
+## Filling a list with a default value
+the ```fill(List list, Object o)``` method replaces all of the elements of the specified list with the specified element. This method is very useful if we want to reset out List to a default value.
 
 
 

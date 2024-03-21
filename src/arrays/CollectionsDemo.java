@@ -28,5 +28,8 @@ public class CollectionsDemo {
 
         Collections.copy(list, list2);
         System.out.println(list);
+
+        Collections.fill(list2, 14);
+        System.out.println(list2);
     }
 }
