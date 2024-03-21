@@ -1259,7 +1259,8 @@ let us discuss some operations that can be performed using the Arrays class
 ## Converting an array into a List
 we can convert an array into a list using the ```asList()``` method. if any changes are made to the resulting list, then changes are propagated to the original array. the asList method returns a fixed-size list, so it is not possible to add or remove elements from this list
 
-
+## checking if two arrays are equal
+we can use the ```equals()``` method of the Arrays class to check if the two arrays are equal or not. Two arrays are considered equal if both have the same number of elements and all corresponding pairs of elements in the two arrays are equal. 
 
 
 
