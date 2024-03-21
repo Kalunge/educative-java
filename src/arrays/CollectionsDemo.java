@@ -15,5 +15,6 @@ public class CollectionsDemo {
         list.add(75);
 
         System.out.println("The minimum element in the lists is: " + Collections.min(list));
+        System.out.println("The maximum element in the lists is: " + Collections.max(list));
     }
 }

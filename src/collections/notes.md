@@ -1302,6 +1302,8 @@ let us look at how we can find the min and max elements in a collection
 ## Finding the minimum element in a collection
 the ```min(Collection c)``` method can be used to find the minimum element in a **Collection**. The elements present in the Collection must implement the Comparable interface. if the elements do not implement the Comparable interface, we can use another overloaded method ```min(Collection c, Comparator comp)```. this method takes a Comparator as a n argument that is used to compare the elements. This method iterates over the entire collection; hence it requires time proportional to the size of the collection.
 
+## Finding the maximum element in a collection
+the ```max(Collection c)``` method can be used to find the maximum element in a colletion. The elements present in the collection must implement the comparable interface. if the elements do not implement the Comparable interface, we can use another overloaded method, ```max(Collection c, Comparator comp)```. this method takes a Comparator as a n argument that is used to compare the elements. This method iterates over the entire Collection; hence it requires time proportional to the size of the Collection
 
 
 
