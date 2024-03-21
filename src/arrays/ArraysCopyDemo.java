@@ -20,5 +20,14 @@ public class ArraysCopyDemo {
         for(int num : newArrayBiggerSize) {
             System.out.print(num +", ");
         }
+
+        int[] rangeCopiedArray = Arrays.copyOfRange(numbers, 0, 5);
+
+        System.out.println("The copied array is");
+
+        for(int num : rangeCopiedArray) {
+            System.out.print(num +", ");
+        }
+
     }
 }

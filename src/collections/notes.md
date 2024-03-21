@@ -1201,8 +1201,34 @@ let us discuss how we can create a copy of an array using the copyOf() method
 if we need to create copies of our array then we can use the ```copyOf()``` method from the **Arrays** class. we need to provide the array that needs to be copied and the new array's size as a parameter.
 the example below show how to create a copy of an array where the copied array size is the same as the original array. if the new array's size is greater than the original aray then the remaining positions filled with zeros
 
+```java
+package arrays;
 
+import java.util.Arrays;
 
+public class ArraysCopyDemo {
+    public static void main(String[] args) {
+        int[] numbers = {1,2,3,4,5,6,7,8,9,10};
+        int[] newArray = Arrays.copyOf(numbers, numbers.length);
+
+        System.out.println("The copied array is");
+
+        for(int num : newArray) {
+            System.out.print(num +", ");
+        }
+
+        int[] newArrayBiggerSize = Arrays.copyOf(numbers, 20);
+
+        System.out.println("The copied array is");
+
+        for(int num : newArrayBiggerSize) {
+            System.out.print(num +", ");
+        }
+    }
+}
+
+```
+it is possible that we may only want to copy a part of our original array. in that case, we can use the ```copyOfRange()``` method. This method takes three arguments: the from index which is inclusive, and a to index which is exclusive.
 
 
 
