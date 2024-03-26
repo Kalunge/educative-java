@@ -1363,6 +1363,224 @@ so the ```copy()``` method does not merge the elements of the two lists. it repl
 ## Filling a list with a default value
 the ```fill(List list, Object o)``` method replaces all of the elements of the specified list with the specified element. This method is very useful if we want to reset out List to a default value.
 
+```java
+package arrays;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class CollectionsDemo {
+    public static void main(String[] args) {
+        List<Integer> list = new ArrayList<>();
+        list.add(34);
+        list.add(12);
+        list.add(12);
+        list.add(9);
+        list.add(76);
+        list.add(29);
+        list.add(75);
+
+        System.out.println("The minimum element in the lists is: " + Collections.min(list));
+        System.out.println("The maximum element in the lists is: " + Collections.max(list));
+        System.out.println("The number of time 12 occurs in the list is: " + Collections.frequency(list, 12));
+        System.out.println("The element 222 can be found at: " + Collections.binarySearch(list, 222));
+
+        List<Integer> list2 = new ArrayList<>();
+        list2.add(90);
+        list2.add(12);
+        list2.add(98);
+        list2.add(43);
+
+        Collections.copy(list, list2);
+        System.out.println(list);
+
+        Collections.fill(list2, 14);
+        System.out.println(list2);
+    }
+}
+
+```
+## Making Collections unmodifiable
+let us discuss how a collection can be made unmodifiable.
+let us say we have created a collection where we have added some important data. we want others to read this data, but they should not be allowed to modify the data in this Collection. The collections class provides certain methods that can be used to make our Collection unmodifiable. These methods return a collection in which if someone tries to add or remove an element, then ```UnspportedOperationExcetion``` is thrown.
+This feature is particularly useful if our collection contains some sensitive data. we need to only give read access to our data, but we dont want others to accidenetally modify it.
+Following is a list of methods available to make Collections unmodifiable. 
+
+1. unmodifiableList(List<? extends T> list)
+2. unmodifiableSet(Set<? extends T> s)
+3. unmodifiableMap(Map<? extends K, ? extends V> m)
+4. unmodifiableCollection(Collection<? extends T> c)
+5. unmodifiableSortedMap(SortedMap<K,? extends V> m)
+6. unmodifiableSortedSet(SortedSet<T> s)
+
+let us look at one of those since they are essentially the same.
+
+## Making ArrayList unmodifiable
+Any List implementation such as an ArrayList or LinkedList can be made unmodifiable by using the ```unmodifiableList(Lists list)``` method of the collections class. if we try to add or remove elements from the returned ist, then **UnsupportedOperationException** will be thrown as shown below.
+```java
+public class UnmodifiableDemo {
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<>();
+        list.add("India");
+        list.add("USA");
+        list.add("Russia");
+
+        List<String> unmodifiableList = Collections.unmodifiableList(list);
+
+        unmodifiableList.add("China"); // throws UnsupportedOperationException
+    }
+}
+```
+let us discuss briefly how the ```unmodifiableList()``` method works. Basically, the collections class has a static inner class called **unmodifiableList**. When we call the ```unmodifiableList()``` list method a new instance of **unmodifiableList** is returned. This class implements the List interface and overrides the operations like add and remove to throw **UnsupportedOperationException**
+some snippets of the actual code are shown below for understanding
+```java
+package arrays;
+
+import java.util.*;
+import java.util.function.UnaryOperator;
+
+public class UnmodifiableList extends UnmmodifiableCollection<E> implements List<E> {
+    private static final long serialVersionUID = -283967356065247728L;
+    final List<? extends E> list;
+    @Override
+    public int size() {
+        return 0;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return false;
+    }
+
+    @Override
+    public boolean contains(Object o) {
+        return false;
+    }
+
+    @Override
+    public Iterator<E> iterator() {
+        return null;
+    }
+
+    @Override
+    public Object[] toArray() {
+        return new Object[0];
+    }
+
+    @Override
+    public <T> T[] toArray(T[] a) {
+        return null;
+    }
+
+    @Override
+    public boolean add(E e) {
+        return false;
+    }
+
+    @Override
+    public boolean remove(Object o) {
+        return false;
+    }
+
+    @Override
+    public boolean containsAll(Collection<?> c) {
+        return false;
+    }
+
+    @Override
+    public boolean addAll(Collection<? extends E> c) {
+        return false;
+    }
+
+    @Override
+    public boolean addAll(int index, Collection<? extends E> c) {
+        return false;
+    }
+
+    @Override
+    public boolean removeAll(Collection<?> c) {
+        return false;
+    }
+
+    @Override
+    public boolean retainAll(Collection<?> c) {
+        return false;
+    }
+
+    @Override
+    public void clear() {
+
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return 0;
+    }
+
+    @Override
+    public E get(int index) {
+        return null;
+    }
+
+    @Override
+    public E set(int index, E element) {
+        return null;
+    }
+
+    @Override
+    public void add(int index, E element) {
+
+    }
+
+    @Override
+    public E remove(int index) {
+        return null;
+    }
+
+    @Override
+    public int indexOf(Object o) {
+        return 0;
+    }
+
+    @Override
+    public int lastIndexOf(Object o) {
+        return 0;
+    }
+
+
+    @Override
+    public void replaceAll(UnaryOperator<E> operator) {
+        throw new UnsupportedOperationException();
+    }
+    
+    @Override
+    public void sort(Comparator<? super E> c) {
+        throw new UnsupportedOperationException();
+    }
+}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
