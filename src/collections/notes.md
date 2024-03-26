@@ -1567,11 +1567,70 @@ public class UnmodifiableList extends UnmmodifiableCollection<E> implements List
 
 ```
 
+## Making Collections thread-safe
+let us discuss how collections can be made thread-safe
 
+Most of the collections such as ArrayList, LinkedList, HashSet, HashMap, etc., are not thread-safe. if two parallel threads modify any of these collectionsparallelly, the user can get stale data of ```concurrentModificationException```.
+we can use thread-safe alternatives such as CopyOnWriteArrayList, ConcurrentHashMap, etc. but what if we dont want to use these alternatives? what if we have already created an ArrayList, and now we want to make it thread-safe.
+The collections class provides us with the following methods that can be used to make our existing collection thread-safe
+1. ```syncronizedCollection(Collection<T> c)```
+2. ```syncronizedList(List<T> list)```
+3. ```syncronizedMap(Map<k,v> map)```
+4. ```syncronizedSet(<Set<T> s)```
+5. ```syncronizedSortedMap(SortedMap<K,V> m)```
+6. ```syncronizedSortedSet(SortedSet<T> s)```
 
+## making an ArrayList thread-safe
+to make an ArrayList thread-safe we can use the ```syncronizedList()``` method. let us see how this method works internally. The collections class contains a static inner class called **syncronizedClass**. the  ```syncronizedList()``` method is called when the object of this class is returned. if you look at the implementation of this class below, then you can see that all the methods have been syncronized.
+since all the methods are syncronized, this makes it very slow. So, we should always try to use the thread-safe implementation instead of making a collection thread-safe using this method. 
+```java
+package arrays;
 
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
 
+public class SyncronizedList<E> extends SynchronizedCollection <E> implements List<E> {
+    private static final long serialVersionUID = -7754090372962971524L;
 
+    final List<E> list;
+
+    @Override
+    public boolean equals(Object o) {
+        if(this == o) {
+            return true;
+        }
+
+        synchronized (mutex) {return list.equals(o));
+    }
+
+    @Override
+    public int hashCode() {
+            synchronized (mutex) {return list.hashCode());
+    }
+
+    @Override
+    public E get(int index) {
+        synchronized (mutex) {return list.get(int index));
+    }
+
+    @Override
+    public E set(int index, E element) {
+        synchronized (mutex) {return list.set(int index, E element));
+    }
+
+    @Override
+    public void add(int index, E element) {
+        synchronized (mutex) {return list.add(int index, E element));
+    }
+
+    @Override
+    public E remove(int index) {
+                            synchronized (mutex) {return list.remove( E element));    }
+}
+
+```
 
 
 
